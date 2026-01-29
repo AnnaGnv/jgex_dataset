@@ -1,0 +1,491 @@
+problem_id,original_NL_problem_statement,statement_source,NL-JGEX_problem_statement,JGEX_problem_statement,problem_runs_on_Newclid_3.01,NL_reference_proof,NL_reference_proof_source,numerical_concept,NL_construction_in_statement,NL_construction_for_proof,final_answer,comment
+1,"Let $\overline{AH_1}$, $\overline{BH_2}$, and $\overline{CH_3}$ be the altitudes of an acute triangle $ABC$.  
+The incircle $\omega$ of triangle $ABC$ touches the sides $BC$, $CA$, and $AB$ at $T_1$, $T_2$, and $T_3$, respectively.  
+Consider the reflections of the lines $H_1H_2$, $H_2H_3$, and $H_3H_1$ with respect to the lines $T_1T_2$, $T_2T_3$, and $T_3T_1$.  
+Prove that these images form a triangle whose vertices lie on $\omega$.",IMO 2000 Problem 6,"Start with a triangle $ABC$. Let $H$ be the orthocenter of $ABC$.
+Let $I$ be the incenter of $ABC$. Let the incircle touch $BC,CA,AB$ at $T_1,T_2,T_3$, respectively.
+Let $H_1,H_2,H_3$ be the feet of the altitudes from $A,B,C$ onto the opposite sides.
+Reflect $H_1$ and $H_2$ across the line $T_1T_2$ to obtain points $X_1$ and $X_2$.
+Reflect $H_2$ and $H_3$ across the line $T_2T_3$ to obtain points $Y_2$ and $Y_3$.
+Define $Z$ as $Z = (X_1X_2)\cap(Y_2Y_3).$
+Let $Q$ be the midpoint of segment $BI$, and let $S$ be the midpoint of segment $IH_2$.
+Prove that $IZ = IT_1$.","a b c = triangle a b c; h = orthocenter h a b c; t1 t2 t3 i = incenter2 t1 t2 t3 i a b c; h1 = foot h1 a b c; h2 = foot h2 b c a; h3 = foot h3 c a b; x1 = reflect x1 h1 t1 t2; x2 = reflect x2 h2 t1 t2; y2 = reflect y2 h2 t2 t3; y3 = reflect y3 h3 t2 t3; z = on_line z x1 x2, on_line z y2 y3 | q = midpoint q b i; s = midpoint s i h2 ? cong i z i t1 ",yes,imo_2000_p6_solution,https://web.evanchen.cc/exams/IMO-2000-notes.pdf,no,"point(9), segment(6), line(9), triangle(1), circle(1)",point(3),N/A,
+2,Let $BC$ be a diameter of circle $\omega$ with center $O$. Let $A$ be a point of circle $\omega$ such that $0^\circ < \angle AOB < 120^\circ$. Let $D$ be the midpoint of arc $AB$ not containing $C$. Line $\ell$ passes through $O$ and is parallel to line $AD$. Line $\ell$ intersects line $AC$ at $J$. The perpendicular bisector of segment $OA$ intersects circle $\omega$ at $E$ and $F$. Prove that $J$ is the incenter of triangle $CEF$.,IMO 2002 Problem 2  (angle-bisector subgoal),"Start with a segment $BC$. Let $O$ be the midpoint of $BC$. Consider the circle with center $O$ and radius $OB$.
+Choose a point $A$ on this circle.
+Let $D$ be a point that lies both on this circle and on the perpendicular bisector of $\overline{AB}$.
+Let $E$ and $F$ be the two points that lie both on this circle and on the perpendicular bisector of $\overline{OA}$.
+Draw the line through $O$ that is parallel to $\overline{AD}$, and let $J$ be its intersection with the line $AC$. Prove that $\angle CEJ=\angle JEF$.","b c = segment b c; o = midpoint o b c; a = on_circle a o b; d = on_circle d o b, on_bline d a b; e = on_bline e o a, on_circle e o b; f = on_bline f o a, on_circle f o b; j = on_pline j o a d, on_line j a c ? eqangle e c e j e j e f",yes,imo_2002_p2_solution,https://web.evanchen.cc/exams/IMO-2002-notes.pdf,yes,"point(8), segment(2), line(3), bisector(1), triangle(1), circle(1)",N/A,N/A,Angle-bisector subgoal at $E$ for incenter characterization
+2,Let $BC$ be a diameter of circle $\omega$ with center $O$. Let $A$ be a point of circle $\omega$ such that $0^\circ < \angle AOB < 120^\circ$. Let $D$ be the midpoint of arc $AB$ not containing $C$. Line $\ell$ passes through $O$ and is parallel to line $AD$. Line $\ell$ intersects line $AC$ at $J$. The perpendicular bisector of segment $OA$ intersects circle $\omega$ at $E$ and $F$. Prove that $J$ is the incenter of triangle $CEF$.,IMO 2002 Problem 2  (angle-bisector subgoal),"Start with a segment $BC$. Let $O$ be the midpoint of $BC$. Consider the circle with center $O$ and radius $OB$.
+Choose a point $A$ on this circle.
+Let $D$ be a point that lies both on this circle and on the perpendicular bisector of $\overline{AB}$.
+Let $E$ and $F$ be the two points that lie both on this circle and on the perpendicular bisector of $\overline{OA}$. Draw the line through $O$ that is parallel to $\overline{AD}$, and let $J$ be its intersection with the line $AC$. Prove that $\angle ECJ=\angle JCF$.","b c = segment b c; o = midpoint o b c; a = on_circle a o b; d = on_circle d o b, on_bline d a b; e = on_bline e o a, on_circle e o b; f = on_bline f o a, on_circle f o b; j = on_pline j o a d, on_line j a c ? eqangle c e c j c j c f",yes,imo_2002_p2_solution,https://web.evanchen.cc/exams/IMO-2002-notes.pdf,yes,"point(8), segment(2), line(3), bisector(1), triangle(1), circle(1)",N/A,N/A,"Angle-bisector subgoal at $C$ for incenter characterization. Together with the first code, we get two independent internal bisectors through $J$, which is sufficient to conclude that $J$ is the incenter of $\triangle CEF$."
+3,"Let $ABC$ be an acute-angled triangle with $AB \ne AC$.  
+The circle with diameter $BC$ intersects the sides $AB$ and $AC$ at $M$ and $N$, respectively.  
+Denote by $O$ the midpoint of the side $BC$.  
+The bisectors of the angles $\angle BAC$ and $\angle MON$ intersect at $R$.  
+Prove that the circumcircles of the triangles $BMR$ and $CNR$ have a common point lying on the side $BC$.
+",IMO 2004 Problem 1,"Start with a triangle $ABC$. $O$ is the midpoint of segment $BC$. The point $M$ lies both on the circle with center $O$ and radius $OB$ and on the line $AB$. $N$ lies both on the circle with center $O$ and radius $OB$ and on the line $AC$. Let $R$ be the intersection point of the internal bisector of $\angle BAC$ and the internal bisector of $\angle MON$. Draw the circumcircle of triangle $BMR$ with center $O_1$ and the circumcircle of triangle $CNR$ with center $O_2$. Let point $P$ lie on both circumcirles. Let $K$ be a point on the perpendicular bisector of $\overline{MN}$, and choose $L$ such that $LK=KA$ and $LO=OA$. Prove that $P$, $B$, and $C$ are collinear.","a b c = triangle a b c; o = midpoint o b c; m = on_circle m o b, on_line m a b; n = on_circle n o b, on_line n a c; r = angle_bisector r b a c, angle_bisector r m o n; o1 = circle o1 b m r; o2 = circle o2 c n r; p = on_circle p o1 r, on_circle p o2 r | k = on_bline k m n; l = eqdistance l k k a, eqdistance l o o a ? coll p b c",yes,imo_2004_p1_solution,https://web.evanchen.cc/exams/IMO-2004-notes.pdf,no,"point(7), segment(3), bisector(2), triangle(3), circle(3)","circle(1), segment(1)",N/A,Added points $K$ and $L$ formalize the reflection symmetry about the bisector of $\angleMON$.
+4,"In a convex quadrilateral $ABCD$, the diagonal $BD$ bisects neither the angle $ABC$ nor the angle $CDA$.  
+The point $P$ lies inside $ABCD$ and satisfies  $\angle PBC = \angle DBA$ and $\angle PDC = \angle BDA.
+$ Prove that $ABCD$ is a cyclic quadrilateral if and only if $AP = CP$.
+",IMO 2004 Problem 5,"Start with a triangle $ABC$. Draw the circumcircle of $\triangle ABC$ with center $O$ and choose a point $D$ on this circle. Construct a point $P$ such that $\angle PBC=\angle ABD$ and $\angle PDC=\angle ADB$.
+Prove that $AP=CP$.","a b c = triangle a b c; o = circle o a b c; d = on_circle d o a; p = on_aline p b c a b d, on_aline p d c a d b ? cong a p c p",yes,imo_2004_p5_solution,https://web.evanchen.cc/exams/IMO-2004-notes.pdf,no,"point(5), segment(3), quadrilateral(1)","point(3), line(3), triangle(1)",N/A,solution 2 (angle chasing solution) 
+5,"Let $ABCD$ be a cyclic quadrilateral.  
+Let $P, Q$ and $R$ be the feet of perpendiculars from $D$ to lines $\overline{BC}$, $\overline{CA}$ and $\overline{AB}$, respectively.  
+Show that $PQ = QR$ if and only if the bisectors of angles $ABC$ and $ADC$ meet on segment $\overline{AC}$.",IMO 2003 Problem 4,"Start with a triangle $ABC$. Draw the circumcircle of $\triangle ABC$ with center $O$.
+Let $B_1$ and $D_1$ be the two points where the perpendicular bisector of $\overline{AC}$ meets the circumcircle of $ABC$. Let $X$ be the intersection of the lines $BB_1$ and $AC$. Let $D$ be a point that lies both on the circumcircle of $ABC$ and on the line $D_1X$. $P$ is the foot from $D$ to line $BC$, $Q$ is the foot from $D$ to line $CA$ and $R$ is the foot from $D$ to line $AB$. Prove that $PQ=QR$.","a b c = triangle a b c; o = circle o a b c; b1 = on_circle b1 o a, on_bline b1 c a; d1 = on_circle d1 o a, on_bline d1 c a; x = on_line x b b1, on_line x a c; d = on_line d d1 x, on_circle d o a; p = foot p d b c; q = foot q d c a; r = foot r d a b ? cong p q q r",yes,imo_2003_p4_solution,https://web.evanchen.cc/exams/IMO-2003-notes.pdf,no,"point(7), segment(6), bisector(2), quadrilateral(1)","point(2), ray(2), line(1), circle(1)",N/A,
+6,"Let $ABCD$ be a fixed convex quadrilateral with $BC=DA$ and $\overline{BC}\nparallel\overline{DA}$. 
+Let two variable points $E$ and $F$ lie on the sides $BC$ and $DA$, respectively, and satisfy $BE=DF$. 
+The lines $AC$ and $BD$ meet at $P$, the lines $BD$ and $EF$ meet at $Q$, and the lines $EF$ and $AC$ meet at $R$. 
+Prove that the circumcircles of the triangles $PQR$, as $E$ and $F$ vary, have a common point other than $P$.
+",IMO 2005 Problem 5,"Start with a triangle $ABC$.
+Choose a point $D$ so that $AD=BC$.
+Let $E$ be a point on the line $BC$.
+Let $F$ be a point on the line $AD$ such that $DF=BE$.
+Define $P$ as the intersection of the lines $AC$ and $BD$, $Q$ as the intersection of the lines $EF$ and $BD$ and $R$ as the intersection of the lines $EF$ and $AC$. Construct the circumcircle through $A,P,D$ with center $O_1$ and the circumcircle through $B,P,C$ with center $O_2$. Let $M$ be the second common point of these circles, different from $P$. Prove that $P,Q,R,M$ are cyclic.","a b c = triangle a b c; d = eqdistance d a b c; e = on_line e b c; f = on_line f a d, eqdistance f d e b; p = on_line p a c, on_line p b d; q = on_line q e f, on_line q b d; r = on_line r e f, on_line r a c; o1 = circle o1 a p d; o2 = circle o2 b p c; m = on_circle m o1 p, on_circle m o2 p ? cyclic p q r m",yes,imo_2005_p5_solution,https://web.evanchen.cc/exams/IMO-2005-notes.pdf,no,"point(9), segment(4), line(3), triangle(1), circle(1), quadrilateral(1)","point(1), circle(5), quadrilateral(4)",N/A,
+7,"In triangle $ABC$ the bisector of $\angle BCA$ meets the circumcircle again at $R$,  
+the perpendicular bisector of $\overline{BC}$ at $P$,  
+and the perpendicular bisector of $\overline{AC}$ at $Q$.  
+The midpoint of $\overline{BC}$ is $K$ and the midpoint of $\overline{AC}$ is $L$.  
+Prove that the triangles $RPK$ and $RQL$ have the same area.
+",IMO 2007 Problem 4,"Start with a triangle $ABC$. Let $O$ be the circumcenter of $\triangle ABC$. Let $R$ be the point on the circumcircle of $ABC$ that also lies on the perpendicular bisector of $\overline{AB}$. Let $L$ be the midpoint of $\overline{AC}$ and $K$ the midpoint of $\overline{BC}$. Define $P$ as the intersection of the lines $OK$ and $CR$, and $Q$ as the intersection of the lines $OL$ and $CR$. Let $L_1$ be the foot of the perpendicular from $L$ to the line $CR$ and $K_1$ the foot of the perpendicular from $K$ to the line $CR$. Prove that $\frac{KK_1}{LL_1}=\frac{RQ}{RP}$.","a b c = triangle a b c; o = circle o a b c; r = on_circle r o a, on_bline r a b; l = midpoint l c a; k = midpoint k c b; p = on_line p o k, on_line p c r; q = on_line q o l, on_line q c r; l1 = foot l1 l c r; k1 = foot k1 k c r ? eqratio k k1 l l1 r q r p",yes,imo_2007_p4_solution,https://web.evanchen.cc/exams/IMO-2007-notes.pdf,no,"point(8), segment(2), bisector(3), triangle(3), circle(1)","point(3), line(4)",N/A,"The JGEX code replaces the bisector of ∠C with the perpendicular bisector of AB for ease of construction, and reformulates “equal area” as an equality of height–base ratios (\frac{KK_1}{LL_1}=\frac{RQ}{RP}), because JGEX can compute segment ratios but not areas."
+8,"Let $H$ be the orthocenter of an acute-angled triangle $ABC$.  
+The circle $\Gamma_A$ centered at the midpoint of $\overline{BC}$ and passing through $H$ intersects the sideline $BC$ at points $A_1$ and $A_2$.  
+Similarly, define the points $B_1$, $B_2$, $C_1$, and $C_2$.  
+Prove that six points $A_1$, $A_2$, $B_1$, $B_2$, $C_1$, $C_2$ are concyclic.
+",IMO 2008 Problem 1a,"Start with a triangle $ABC$. Let $H$ be the orthocenter of $ABC$.
+Let $D,E,F$ be the midpoints of $\overline{BC},\overline{AC},\overline{AB}$ respectively. Let $A_1,A_2$ be the two intersection points of the circle centered at $D$ passing through $H$ with the line $BC$. Let $B_1,B_2$ be the two intersection points of the circle centered at $E$ passing through $H$ with the line $CA$.  Let $C_1,C_2$ be the two intersection points of the circle centered at $F$ passing through $H$ with the line $AB$. Let $O_1$ be the point such that $O_1E=EH$ and on the line through $H$ perpendicular to $EF$.  Prove that $C_1,C_2,B_1,B_2$ are cyclic.","a b c = triangle a b c; h = orthocenter h a b c; d = midpoint d b c; e = midpoint e a c; f = midpoint f a b; a1 = on_circle a1 d h, on_line a1 b c; a2 = on_circle a2 d h, on_line a2 b c; b1 = on_circle b1 e h, on_line b1 c a; b2 = on_circle b2 e h, on_line b2 c a; c1 = on_circle c1 f h, on_line c1 a b; c2 = on_circle c2 f h, on_line c2 a b | o1 = eqdistance o1 e e h, on_tline o1 h e f ? cyclic c1 c2 b1 b2",yes,imo_2008_p1_solution,https://web.evanchen.cc/exams/IMO-2008-notes.pdf,no,"point(13), segment(3), line(3), triangle(1), circle(3)","point(1), line(3)",N/A,"Mirrors the original AlphaGeometry approach:
+it proves a single 4-point cyclicity (c1,c2,b1,b2) but does not attempt the full 6-point conclusion the problem is asking for.
+Note relative to the construction count: This count includes implicitly constructed objects such as the side midpoints and the circles $\Gamma_B,\Gamma_C$ that are referred to indirectly by “similarly define.” "
+8,"Let $H$ be the orthocenter of an acute-angled triangle $ABC$.  
+The circle $\Gamma_A$ centered at the midpoint of $\overline{BC}$ and passing through $H$ intersects the sideline $BC$ at points $A_1$ and $A_2$.  
+Similarly, define the points $B_1$, $B_2$, $C_1$, and $C_2$.  
+Prove that six points $A_1$, $A_2$, $B_1$, $B_2$, $C_1$, $C_2$ are concyclic.
+",IMO 2008 Problem 1b,"Start with a triangle $ABC$. Let $H$ be the orthocenter of $ABC$.
+Let $D,E,F$ be the midpoints of $\overline{BC},\overline{AC},\overline{AB}$ respectively. Let $A_1,A_2$ be the two intersection points of the circle centered at $D$ passing through $H$ with the line $BC$. Let $B_1,B_2$ be the two intersection points of the circle centered at $E$ passing through $H$ with the line $CA$.  Let $C_1,C_2$ be the two intersection points of the circle centered at $F$ passing through $H$ with the line $AB$. Let $O_1$ be the point such that $O_1E=EH$ and on the line through $H$ perpendicular to $EF$. Let $O_2$ be a point such that $O_2E=EH$ and on the line through $H$ perpendicular to $ED$. Let $O_3$ be a point such that $O_3F=FH$ and on the line through $H$ perpendicular to $FD$.
+Let $O$ denote the circle through the three points $C_1,C_2,B_1$. Prove that $C_1,C_2,B_1,B_2,A_1,A_2$ are cyclic.","a b c = triangle a b c; h = orthocenter h a b c; d = midpoint d b c; e = midpoint e a c; f = midpoint f a b; a1 = on_circle a1 d h, on_line a1 b c; a2 = on_circle a2 d h, on_line a2 b c; b1 = on_circle b1 e h, on_line b1 c a; b2 = on_circle b2 e h, on_line b2 c a; c1 = on_circle c1 f h, on_line c1 a b; c2 = on_circle c2 f h, on_line c2 a b | o1 = eqdistance o1 e e h, on_tline o1 h e f; o2 = eqdistance o2 e e h, on_tline o2 h e d; o3 = eqdistance o3 f f h, on_tline o3 h f d; o = circle o c1 c2 b1 ? cyclic c1 c2 b1 b2 a1 a2",yes,imo_2008_p1_solution,https://web.evanchen.cc/exams/IMO-2008-notes.pdf,no,"point(13), segment(3), line(3), triangle(1), circle(3)","point(1), line(3)",N/A,"Here we add the right auxiliary points (o1,o2,o3) and explicitly fix the circumcircle through(c1,c2,b1), then ask for cyclicity of all six points (c1,c2,b1,b2,a1,a2).
+ These additions complete the whole problem. Note relative to the construction count : This count includes implicitly constructed objects such as the side midpoints and the circles $\Gamma_B,\Gamma_C$ that are referred to indirectly by “similarly define.” "
+9,"Let $ABCD$ be a convex quadrilateral with $BA \ne BC$.  
+Denote the incircles of triangles $ABC$ and $ADC$ by $\omega_1$ and $\omega_2$ respectively.  
+Suppose that there exists a circle $\omega$ tangent to ray $BA$ beyond $A$ and to the ray $BC$ beyond $C$,  
+which is also tangent to the lines $AD$ and $CD$.  
+Prove that the common external tangents to $\omega_1$ and $\omega_2$ intersect on $\omega$.",IMO 2008 Problem 6,"Start with a triangle $XYZ$. Let $O$ be the circumcenter of $\triangle XYZ$. Choose a point $W$ on this same circle. Define four lines tangent to the circle at $X,Y,Z,W$: let $A$ be the intersection of the tangents at $Z$ and at $X$, $B$ be the intersection of the tangents at $Z$ and at $W$, $C$ be the intersection of the tangents at $Y$ and at $W$ and $D$ be the intersection of the tangents at $X$ and at $Y$.Let $I_1$ be the incenter of $\triangle ABC$ and $I_2$ the incenter of $\triangle ACD$. Let $F_1$ be the foot of the perpendicular from $I_1$ to the line $AC$, and $F_2$ the foot of the perpendicular from $I_2$ to the line $AC$. Construct the two common external tangents to these two incircles. Let one tangent touch the first incircle at $Q$ and the second at $T$, and let the other tangent touch them at $P$ and $S$.
+Let $K$ be the intersection point of these two tangent lines $QT$ and $PS$. Prove that $K$ lies on the circle centered at $O$ with radius $OX$; equivalently, $OK = OX$.","x@4.96_-0.13 y@-1.0068968328888160_-1.2534881080682770 z@-2.8402847238575120_-4.9117762734006830 = triangle x y z; o = circle o x y z; w@6.9090049230038776_-1.3884003936987552 = on_circle w o x; a = on_tline a z o z, on_tline a x o x; b = on_tline b z o z, on_tline b w o w; c = on_tline c y o y, on_tline c w o w; d = on_tline d x o x, on_tline d y o y; i1 = incenter i1 a b c; i2 = incenter i2 a c d; f1 = foot f1 i1 a c; f2 = foot f2 i2 a c; q t p s = cc_tangent q t p s i1 f1 i2 f2; k = on_line k q t, on_line k p s ? cong o k o x",no,imo_2008_p6_solution,https://web.evanchen.cc/exams/IMO-2008-notes.pdf,no,"point(4), line(4), ray(2), triangle(2), circle(3), quadrilateral(1)","point(5), segment(2)",N/A,"Coordinates are fixed (from original AlphaGeometry) to pin X,Y,Z,W on the same side of the semicircle. 
+"
+10,"Let $ABC$ be a triangle with circumcenter $O$.  
+The points $P$ and $Q$ are interior points of the sides $CA$ and $AB$ respectively.  
+Let $K, L, M$ be the midpoints of $\overline{BP}$, $\overline{CQ}$, $\overline{PQ}$.  
+Suppose that $\overline{PQ}$ is tangent to the circumcircle of $\triangle KLM$.  
+Prove that $OP = OQ$.
+",IMO 2009 Problem 2,"Start with a triangle $MLK$. Let $W$ we the circumcenter of this triangle. Let  $Q$ pe a point on the line tangent to this circle at $M$. Let $P$ be the reflection of $Q$ in $M$,  $B$ the reflection of $P$ in $K$ and $C$  the reflection of $Q$ in $L$. Define $A$ as the intersection of the lines $BQ$ and $CP$.
+Let $O$ be the circumcenter of $\triangle ABC$. Take $D$ so that $DL=MK$ and $DM=LK$. Let $E$ be the reflection of $K$ in $W$, and $F$ the reflection of $Q$ in $D$. Prove that $OP = OQ.$","m l k = triangle m l k; w = circle w m l k; q = on_tline q m w m; p = mirror p q m; b = mirror b p k; c = mirror c q l; a = on_line a b q, on_line a c p; o = circle o a b c | d = eqdistance d l m k, eqdistance d m l k; e = mirror e k w; f = mirror f q d ? cong o p o q",yes,imo_2009_p2_solution,https://web.evanchen.cc/exams/IMO-2009-notes.pdf,no,"point(9), segment(7), triangle(2), circle(2)",N/A,N/A,
+11,"Let $I$ be the incenter of a triangle $ABC$ and let $\Gamma$ be its circumcircle.  
+Let line $AI$ intersect $\Gamma$ again at $D$.  
+Let $E$ be a point on arc $\widehat{BDC}$ and $F$ a point on side $BC$ such that  
+$ \angle BAF = \angle CAE < \tfrac{1}{2}\angle BAC.$
+Finally, let $G$ be the midpoint of $\overline{IF}$.  
+Prove that $\overline{DG}$ and $\overline{EI}$ intersect on $\Gamma$.",IMO 2010 Problem 2,"Start with a triangle $ABC$. Let $O$ be the circumcircle of this triangle. Let $I$ be the incenter of $\triangle ABC$.
+Let $D$ be the point that lies both on the line $AI$ and on the circumcircle of $\triangle ABC$.
+Let $F$ be a point on the line $BC$.
+Choose a point $E$ on the circumcircle of $\triangle ABC$ such that $\angle EAC = \angle BAF$.
+Let $G$ be the midpoint of segment $\overline{IF}$.
+Let $K$ be the intersection point of the lines $DG$ and $EI$.
+Let $H$ be the reflection of $E$ in $O$. Let $L$ be the midpoint of $\overline{AI}$ and $M$ be the midpoint of $\overline{BI}$.
+Prove that $OA = OK$.","a b c = triangle a b c; o = circle o a b c; i = incenter i a b c; d = on_line d a i, on_circle d o a; f = on_line f b c; e = on_aline e a c b a f, on_circle e o a; g = midpoint g i f; k = on_line k d g, on_line k e i | h = mirror h e o; l = midpoint l a i; m = midpoint m b i ? cong o a o k",yes,imo_2010_p2_solution,https://web.evanchen.cc/exams/IMO-2010-notes.pdf,yes,"point(8), segment(4), line(1), triangle(1), circle(1)","point(6), segment(4)",N/A,"Proving $OA = OK$ means that $K$ lies on the circumcircle $\Gamma$; therefore, the JGEX formulation is equivalent to the original statement that the lines $\overline{DG}$ and $\overline{EI}$ intersect on $\Gamma$.
+
+"
+12,"Let $P$ be a point interior to triangle $ABC$ (with $CA \ne CB$).  
+The lines $AP$, $BP$ and $CP$ meet again its circumcircle $\Gamma$ at $K$, $L$, $M$, respectively.  
+The tangent line at $C$ to $\Gamma$ meets the line $AB$ at $S$.  
+Show that from $SC = SP$ follows $MK = ML$.
+",IMO 2010 Problem 4,"Let $SCP$ be an isosceles triangle with $SC = SP$.
+Let $O$ be a point on the line through $C$ that is perpendicular to $CS$.
+Consider the circle with center $O$ and radius $OC$.
+Choose a point $A$ on this circle.
+Let $B$ be the point that lies both on this circle and on the line $SA$.
+Let $M$ be the point that lies both on this circle and on the line $CP$.
+Let $L$ be the point that lies both on this circle and on the line $BP$.
+Let $K$ be the point that lies both on this circle and on the line $AP$.
+Prove that $MK = ML.$","s c p = iso_triangle s c p; o = on_tline o c s c; a = on_circle a o c; b = on_circle b o c, on_line b s a; m = on_line m c p, on_circle m o c; l = on_line l b p, on_circle l o c; k = on_line k a p, on_circle k o c ? cong m k m l",yes,imo_2010_p4_solution,https://web.evanchen.cc/exams/IMO-2010-notes.pdf,no,"point(8), segment(6), line(5), triangle(1), circle(1)","point(2), line(2), circle(1)",N/A,The jgex code starts from an isosceles triangle $SCP$ to encode the condition $SC=SP$.  We use the first solution for object construction counting.
+13," Let $ABC$ be an acute triangle with circumcircle $\Gamma$.  
+Let $\ell$ be a tangent line to $\Gamma$, and let $\ell_a, \ell_b, \ell_c$ be the lines obtained by reflecting $\ell$ in the lines $BC$, $CA$, and $AB$, respectively.  
+Show that the circumcircle of the triangle determined by the lines $\ell_a$, $\ell_b$, and $\ell_c$ is tangent to the circle $\Gamma$.",IMO 2011 Problem 6,"Start with a triangle $ABC$. Let $O$ be the circumcenter of $\triangle ABC$. Choose a point $P$ on this circumcircle.
+Let $Q$ lie on the line through $P$ perpendicular to $OP$.
+Reflect $P$ in the side lines of $ABC$: $P_a$ is the reflection of $P$ across line $BC$; $P_b$ is the reflection of $P$ across line $CA$; $P_c$ is the reflection of $P$ across line $AB$.
+Reflect $Q$ in the same side lines: $Q_a$ is the reflection of $Q$ across $BC$; $Q_b$ is the reflection of $Q$ across $CA$; $Q_c$ is the reflection of $Q$ across $AB$.
+Define the intersection points $A_1=(P_bQ_b)\cap(P_cQ_c),
+B_1=(P_aQ_a)\cap(P_cQ_c),C_1=(P_aQ_a)\cap(P_bQ_b).$
+Let $O_1$ be the circumcenter of $\triangle A_1B_1C_1$.
+Choose a point $X$ that lies on both circumcircles: on the circle centered at $O$ through $A$ and on the circle centered at $O_1$ through $A_1$.
+Prove that $X$, $O$, and $O_1$ are collinear.","a b c = triangle a b c; o = circle o a b c; p = on_circle p o a; q = on_tline q p o p; pa = reflect pa p b c; pb = reflect pb p c a; pc = reflect pc p a b; qa = reflect qa q b c; qb = reflect qb q c a; qc = reflect qc q a b; a1 = on_line a1 pb qb, on_line a1 pc qc; b1 = on_line b1 pa qa, on_line b1 pc qc; c1 = on_line c1 pa qa, on_line c1 pb qb; o1 = circle o1 a1 b1 c1; x = on_circle x o a, on_circle x o1 a1 ? coll x o o1",no,imo_2011_p6_solution,https://web.evanchen.cc/exams/IMO-2011-notes.pdf,no,"point(3), line(7), triangle(2), circle(2)","point(6), line(3)",N/A,The orginal statement and jgex goals are equivalent because two circles are tangent if and only if the line joining their centers passes through the point of tangency.
+14,"Let $ABC$ be a triangle and $J$ the center of the $A$-excircle.  
+This excircle is tangent to the side $BC$ at $M$, and to the lines $AB$ and $AC$ at $K$ and $L$, respectively.  
+The lines $LM$ and $BJ$ meet at $F$, and the lines $KM$ and $CJ$ meet at $G$.  
+Let $S$ be the point of intersection of the lines $AF$ and $BC$, and let $T$ be the point of intersection of the lines $AG$ and $BC$.  
+Prove that $M$ is the midpoint of $\overline{ST}$.",IMO 2012 Problem 1,"Start with a triangle $ABC$.
+Let $J$ be the $A$-excenter of $\triangle ABC$, and let the $A$-excircle touch the lines $BC$, $AB$, and $AC$ at $M$, $L$, and $K$, respectively.
+Let $F$ be the intersection of the lines $ML$ and $BJ$.
+Let $G$ be the intersection of the lines $MK$ and $CJ$.
+Let $S$ be the intersection of the lines $FA$ and $BC$.
+Let $T$ be the intersection of the lines $GA$ and $BC$.
+Prove that $MS=MT$.","a b c = triangle a b c; m l k j = excenter2 m l k j a b c; f = on_line f m l, on_line f b j; g = on_line g m k, on_line g c j; s = on_line s f a, on_line s b c; t = on_line t g a, on_line t c b ? cong m s m t",yes,imo_2012_p1_solution,https://web.evanchen.cc/exams/IMO-2012-notes.pdf,no,"point(11), segment(2), line(9), triangle(1), circle(1)",N/A,N/A,
+15,"Let $ABC$ be a triangle with $\angle BCA = 90^\circ$, and let $D$ be the foot of the altitude from $C$.  
+Let $X$ be a point in the interior of the segment $CD$.  
+Let $K$ be the point on the segment $AX$ such that $BK = BC$.  
+Similarly, let $L$ be the point on the segment $BX$ such that $AL = AC$.  
+Let $M = \overline{AL} \cap \overline{BK}$.  
+Prove that $MK = ML$.",IMO 2012 Problem 5,"Start with a right triangle $CAB$ with right angle at $C$.
+Let $D$ be the foot of the perpendicular from $C$ to the line $AB$.
+Choose a point $X$ on the line $CD$.
+Let $K$ be the point lying both on the line $AX$ and on the circle with center $B$ and radius $BC$.
+Let $L$ be the point lying both on the line $BX$ and on the circle with center $A$ and radius $AC$.
+Let $M$ be the intersection point of the lines $AL$ and $BK$.
+Let $J$ lie on the perpendicular bisector of $AB$ and also on the perpendicular bisector of $CA$.
+Let $E$ be the intersection of the line through $D$ perpendicular to $AJ$ and the line through $A$ perpendicular to $BX$.
+Prove that $MK=ML.$","c a b = r_triangle c a b; d = foot d c a b; x = on_line x c d; k = on_line k a x, on_circle k b c; l = on_line l b x, on_circle l a c; m = on_line m a l, on_line m b k | j = on_bline j a b, on_bline j c a; e = on_tline e d a j, on_tline e a b x ? cong m k m l",yes,imo_2012_p5_solution,https://web.evanchen.cc/exams/IMO-2012-notes.pdf,yes,"point(8), segment(7), triangle(1)","circle (3), ray(2), point(2), segment(2)",N/A,"In JGEX, the condition $BK = BC$ is expressed by placing $K$ on the circle centered at $B$ with radius $BC$, and similarly $AL = AC$ is expressed by placing $L$ on the circle centered at $A$ with radius $AC$.
+$J$ is the circumcenter of $\triangle ABC$.
+"
+16,"Let $ABC$ be an acute triangle with orthocenter $H$, and let $W$ be a point on the side $\overline{BC}$, between $B$ and $C$.  
+The points $M$ and $N$ are the feet of the altitudes drawn from $B$ and $C$, respectively.  
+Suppose $\omega_1$ is the circumcircle of triangle $BWN$ and $X$ is a point such that $\overline{WX}$ is a diameter of $\omega_1$.  
+Similarly, $\omega_2$ is the circumcircle of triangle $CWM$ and $Y$ is a point such that $\overline{WY}$ is a diameter of $\omega_2$.  
+Show that the points $X$, $Y$, and $H$ are collinear.",IMO 2013 Problem 4,"Start with a triangle $ABC$.
+Let $H$ be the orthocenter of $ABC$.
+Define $M$ as the intersection of the lines $HB$ and $AC$, $N$ as the intersection of the lines $HC$ and $AB$.
+Let $W$ be a point on the line $BC$.
+Let $O_1$ be the center of the circle through $B,N,W$, and $O_2$ the center of the circle through $C,M,W$.
+Let $X$ be a point that lies both on the line $O_1W$ and on the circle centered at $O_1$ passing through $W$.
+Let $Y$ be a point that lies both on the line $O_2W$ and on the circle centered at $O_2$ passing through $W$.
+Prove that the points $X,H,Y$ are collinear.","a b c = triangle a b c; h = orthocenter h a b c; m = on_line m h b, on_line m a c; n = on_line n h c, on_line n a b; w = on_line w b c; o1 = circle o1 b n w; o2 = circle o2 c m w; x = on_line x o1 w, on_circle x o1 w; y = on_line y o2 w, on_circle y o2 w ? coll x h y",yes,imo_2013_p4_solution,https://web.evanchen.cc/exams/IMO-2013-notes.pdf,no,"point(9), segment(3), triangle(3), circle(2)","point(1), circle(1), line(3)",N/A,first solution
+17,"Let $P$ and $Q$ be on segment $BC$ of an acute triangle $ABC$ such that $\angle PAB = \angle BCA$ and $\angle CAQ = \angle ABC$.  
+Let $M$ and $N$ be points on $\overline{AP}$ and $\overline{AQ}$, respectively, such that $P$ is the midpoint of $\overline{AM}$ and $Q$ is the midpoint of $\overline{AN}$.  
+Prove that $\overline{BM}$ and $\overline{CN}$ meet on the circumcircle of $\triangle ABC$.",IMO 2014 Problem 4,"Start with a triangle $ABC$.
+Let $P$ lie on the line $BC$ such that $\angle PAB=\angle BCA$.
+Let $Q$ lie on the line $BC$ such that $\angle QAC=\angle CBA$.
+Let $M$ be the reflection of $A$ across $P$.
+Let $N$ be the reflection of $A$ across $Q$.
+Let $X$ be the intersection point of the lines $BM$ and $CN$.
+Let $O$ be the center of the circumcircle of $\triangle ABC$.
+Prove that $OX=OA$; equivalently, $X$ lies on the circumcircle of $\triangle ABC$.","a b c = triangle a b c; p = on_line p b c, on_aline p a b b c a; q = on_line q b c, on_aline q a c c b a; m = mirror m a p; n = mirror n a q; x = on_line x b m, on_line x c n; o = circle o a b c ? cong o x o a",yes,imo_2014_p4_solution,https://web.evanchen.cc/exams/IMO-2014-notes.pdf,no,"point(7), segment(7), triangle(1), circle(1)","point(3), line(1)",N/A,"In JGEX, the condition that $P$ and $Q$ are the midpoints of $\overline{AM}$ and $\overline{AN}$ is expressed by writing $M$ and $N$ as the reflections of $A$ across $P$ and $Q$ respectively. Additionaly, proving that $OX=OA$ is equivalent to proving that $X$ lies on the circumcircle of $\triangle ABC$.
+first solution, note: in the solution we show that $X$=$Y$ but still count them as 2 separate points."
+18,"Let $ABC$ be an acute triangle with $AB > AC$.  
+Let $\Gamma$ be its circumcircle, $H$ its orthocenter, and $F$ the foot of the altitude from $A$.  
+Let $M$ be the midpoint of $\overline{BC}$.  
+Let $Q$ be the point on $\Gamma$ such that $\angle HQA = 90^\circ$ and let $K$ be the point on $\Gamma$ such that $\angle HKQ = 90^\circ$.  
+Assume that the points $A, B, C, K$ and $Q$ are all different and lie on $\Gamma$ in this order.  
+Prove that the circumcircles of triangles $KQH$ and $FKM$ are tangent to each other.",IMO 2015 Problem 3,"Start with a triangle $ABC$.
+Let $H$ be the orthocenter of $ABC$.
+Let $F$ be the intersection of the lines $HA$ and $BC$.
+Let $M$ be the midpoint of $\overline{BC}$.
+Let $O$ be the center of the circumcircle of $\triangle ABC$ 
+Choose $Q$ on this circumcircle such that $Q$ also lies on the circle with diameter $\overline{AH}$.
+Choose $K$ on the same circumcircle such that $K$ also lies on the circle with diameter $\overline{HQ}$.
+Let $O_1$ be the the circumcenter of $\triangle KQH$.
+Let $O_2$ be the circumcenter of $\triangle FKM$.
+Prove that $O_1$, $O_2$, and $K$ are collinear.","a b c = triangle a b c; h = orthocenter h a b c; f = on_line f h a, on_line f b c; m = midpoint m b c; o = circle o a b c; q = on_dia q a h, on_circle q o a; k = on_dia k h q, on_circle k o a; o1 = circle o1 k q h; o2 = circle o2 f k m ? coll o1 o2 k",no,imo_2015_p3_solution,https://web.evanchen.cc/exams/IMO-2015-notes.pdf,yes,"point(8), segment(4), triangle(3), circle(3)","point(4), segment(2), line(4), circle(2)",N/A,"In JGEX, choosing $Q$ on the circumcircle and on the circle with diameter $AH$ encodes $\angle AQH=90^\circ$, and choosing $K$ on the circumcircle and on the circle with diameter $HQ$ encodes $\angle HKQ=90^\circ$.
+"
+19,"Triangle $ABC$ has circumcircle $\Omega$ and circumcenter $O$.  
+A circle $\Gamma$ with center $A$ intersects the segment $BC$ at points $D$ and $E$, such that $B, D, E,$ and $C$ are all different and lie on line $BC$ in this order.  
+Let $F$ and $G$ be the points of intersection of $\Gamma$ and $\Omega$, such that $A, F, B, C,$ and $G$ lie on $\Omega$ in this order.  
+Let $K = (BDF) \cap \overline{AB} \ne B$ and $L = (CGE) \cap \overline{AC} \ne C$ and assume these points do not lie on line $FG$.  
+Define $X = \overline{FK} \cap \overline{GL}$.  
+Prove that $X$ lies on the line $AO$.",IMO 2015 Problem 4,"Start with a triangle $ABC$.
+Let $O$ be the center of the circumcircle of $\triangle ABC$.
+Choose a point $D$ on the line $BC$.
+Let $E$ be a point lying both on the line $BC$ and on the circle centered at $A$ with radius $AD$.
+Let $F$ be a point lying both on the circumcircle of center $O$ and on the circle centered at $A$ with radius $AD$.
+Let $G$ be another point lying both on the same two circles.
+Let $o_1$ be the circle through the three points $F,B,D$, and let $o_2$ be the circle through the three points $G,C,E$.
+Let $K$ be a point lying both on the circle $o_1$ and on the line $AB$.
+Let $L$ be a point lying both on the circle $o_2$ and on the line $AC$.
+Let $X$ be the intersection of the lines $FK$ and $LG$.
+Prove that the points $X,O,A$ are collinear.","a b c = triangle a b c; o = circle o a b c; d = on_line d b c; e = on_line e b c, on_circle e a d; f = on_circle f o a, on_circle f a d; g = on_circle g o a, on_circle g a d; o1 = circle o1 f b d; o2 = circle o2 g c e; k = on_circle k o1 b, on_line k a b; l = on_circle l o2 c, on_line l a c; x = on_line x f k, on_line x l g ? coll x o a",yes,imo_2015_p4_solution,https://web.evanchen.cc/exams/IMO-2015-notes.pdf,no,"point(11), segment(5), line(2), triangle(3), circle(4)","point (2), quadrilateral(2), segment(9)",N/A,Note relative to the construction count: triangles BDF and CGE appear via their circumcircles.
+20,"In convex pentagon $ABCDE$ with $\angle B > 90^\circ$, let $F$ be a point on $\overline{AC}$ such that $\angle FBC = 90^\circ$.  
+It is given that $FA = FB$, $DA = DC$, $EA = ED$, and rays $\overline{AC}$ and $\overline{AD}$ trisect $\angle BAE$.  
+Let $M$ be the midpoint of $\overline{CF}$.  
+Let $X$ be the point such that $AMXE$ is a parallelogram.  
+Show that $\overline{FX}$, $\overline{EM}$, $\overline{BD}$ are concurrent.",IMO 2016 Problem 1,"Start with a triangle $ABZ$.
+Let $F$ be the point on the internal bisector of $\angle BAZ$ such that $F$ also lies on the perpendicular bisector of $\overline{AB}$.
+Let $C$ be the intersection of the line $AF$ with the line through $B$ perpendicular to $BF$.
+Let $D$ be the point that lies both on the line $AZ$ and on the perpendicular bisector of $\overline{AC}$.
+Place $E$ on the perpendicular bisector of $\overline{AD}$, and require that the ray $AE$ is the mirror image of the ray $AC$ across the internal bisector of $\angle CAD$.
+Let $M$ be the midpoint of $\overline{CF}$.
+Construct $X$ so that $E A M X$ is a parallelogram.
+Let $Y$ be the intersection of the lines $FX$ and $EM$.
+Prove that the points $Y$, $B$, and $D$ are collinear.","a b z = triangle a b z; f = angle_bisector f b a z, on_bline f a b; c = on_tline c b f b, on_line c a f; d = on_line d a z, on_bline d a c; e = angle_mirror e c a d, on_bline e a d; m = midpoint m c f; x = parallelogram x e a m; y = on_line y f x, on_line y e m ? coll y b d",yes,imo_2016_p1_solution,https://web.evanchen.cc/exams/IMO-2016-notes.pdf,yes,"point(8), segment(8), line(3), ray(2), pentagon(1)","triangle(4), circle(6), quadrilateral(2), ray(2), segment(3)",N/A,
+21,"Let $R$ and $S$ be different points on a circle $\Omega$ such that $\overline{RS}$ is not a diameter.  
+Let $\ell$ be the tangent line to $\Omega$ at $R$.  
+Point $T$ is such that $S$ is the midpoint of $\overline{RT}$.  
+Point $J$ is chosen on minor arc $RS$ of $\Omega$ so that the circumcircle $\Gamma$ of triangle $JST$ intersects $\ell$ at two distinct points.  
+Let $A$ be the common point of $\Gamma$ and $\ell$ closer to $R$.  
+Line $AJ$ meets $\Omega$ again at $K$.  
+Prove that line $KT$ is tangent to $\Gamma$.",IMO 2017 Problem 4,"Start with a segment $\overline{RS}$.
+Let $T$ be the reflection of $R$ in $S$.
+Let $O$ lie on the perpendicular bisector of $\overline{RS}$. Choose a point $J$ on the circle centered at $O$ with radius $OS$.
+Let $O_1$ be the circumcenter of $\triangle JST$.
+Let $A$ be a point that lies both on the line through $R$ perpendicular to $OR$ and on the circle centered at $O_1$.
+Let $B$ be another point with the same two properties.
+Let $K$ be the point that lies both on the line $JA$ and on the circle centered at $O$ with radius $OS$.
+Prove that $KT \perp O_1T$.
+","r s = segment r s; t = mirror t r s; o = on_bline o r s; j = on_circle j o s; o1 = circle o1 j s t; a = on_tline a r o r, on_circle a o1 s; b = on_tline b r o r, on_circle b o1 s; k = on_line k j a, on_circle k o s ? perp k t o1 t",yes,imo_2017_p4_solution,https://web.evanchen.cc/exams/IMO-2017-notes.pdf,no,"point(6), segment(2), line(3), triangle(1), circle(2)","segment(3), triangle(4)",N/A,first solution
+22,"Let $\Gamma$ be the circumcircle of acute triangle $ABC$.  
+Points $D$ and $E$ lie on segments $AB$ and $AC$, respectively, such that $AD = AE$.  
+The perpendicular bisectors of $\overline{BD}$ and $\overline{CE}$ intersect the minor arcs $AB$ and $AC$ of $\Gamma$ at points $F$ and $G$, respectively.  
+Prove that the lines $DE$ and $FG$ are parallel.",IMO 2018 Problem 1,"Start with a triangle $ABC$.
+Let $O$ be the circumcircle of $\triangle ABC$.
+Choose a point $D$ on the line $AB$.
+Let $E$ be the point that lies both on the line $AC$ and on the circle centered at $A$ with radius $AD$.
+Let $F$ be the point that lies both on the perpendicular bisector of $\overline{BD}$ and on the circumcircle $O$.
+Let $G$ be the point that lies both on the perpendicular bisector of $\overline{EC}$ and on the circumcircle $O$.
+Define $I$ as a point lying on both the circle centered at $D$ with radius $DA$ and the circle centered at $F$ with radius $FA$ . Define $J$ as a point lying on both the circle centered at $E$ with radius $EA$ and the circle centered at $G$ with radius $GA$ .
+Prove that the lines $DE$ and $FG$ are parallel.
+","a b c = triangle a b c; o = circle o a b c; d = on_line d a b; e = on_line e a c, on_circle e a d; f = on_bline f b d, on_circle f o a; g = on_bline g e c, on_circle g o a | i = on_circle i d a, on_circle i f a; j = on_circle j e a, on_circle j g a ? para d e f g",yes,imo_2018_p1_solution,https://web.evanchen.cc/exams/IMO-2018-notes.pdf,no,"point(7), segment(6), line(2), bisector(2), triangle(1), circle(1)","quadrilateral(2), point(4), segment(5)",N/A,$I$ and $J$ are introduced in JGEX to draw perpendiculars $AI \perp DF and $AJ \perp EG$ . first solution
+23,"In triangle $ABC$ point $A_1$ lies on side $BC$ and point $B_1$ lies on side $AC$.  
+Let $P$ and $Q$ be points on segments $AA_1$ and $BB_1$, respectively, such that $\overline{PQ} \parallel \overline{AB}$.  
+Point $P_1$ is chosen on ray $PB_1$ beyond $B_1$ such that $\angle PP_1C = \angle BAC$.  
+Point $Q_1$ is chosen on ray $QA_1$ beyond $A_1$ such that $\angle CQ_1Q = \angle CBA$.  
+Prove that points $P_1, Q_1, P, Q$ are cyclic.
+",IMO 2019 Problem 2,"Start with a triangle $ABC$.
+Let $A_1$ be a point on the line $BC$, and let $B_1$ be a point on the line $AC$.
+Let $P$ lie on the line $AA_1$.
+Let $Q$ be the intersection of the line $BB_1$ with the line through $P$ that is parallel to $AB$.
+Let $P_1$ lie on the line $PB_1$ such that $\angle P_1PC=\angle ABC$.
+Let $Q_1$ lie on the line $QA_1$ such that $\angle Q_1CQ=\angle BCA$.
+Let $O$ be the circumcircle of $\triangle ABC$. Take $A_2$ on circle with center $O$ with $A_2\in AA_1$, and $B_2$ on circle with center $O$ with $B_2\in BB_1$.
+Prove that the four points $P,Q,P_1,Q_1$ are cyclic.
+","a b c = triangle a b c; a1 = on_line a1 b c; b1 = on_line b1 a c; p = on_line p a a1; q = on_line q b b1, on_pline q p a b; p1 = on_line p1 p b1, eqangle3 p1 p c a b c; q1 = on_line q1 q a1, eqangle3 q1 c q b c a | o = circle o a b c; a2 = on_circle a2 o a, on_line a2 a a1; b2 = on_circle b2 o b, on_line b2 b b1 ? cyclic p q p1 q1",yes,imo_2019_p2_solution,https://web.evanchen.cc/exams/IMO-2019-notes.pdf,no,"point(9), segment(6), ray(2), triangle(1)","line(2), point(2), cirlce(1)",N/A,second solution
+24,"Let $ABC$ be a triangle with incenter $I$ and incircle $\omega$.  
+Let $D, E, F$ denote the tangency points of $\omega$ with $\overline{BC}, \overline{CA}, \overline{AB}$.  
+The line through $D$ perpendicular to $\overline{EF}$ meets $\omega$ again at $R$ (other than $D$), and line $AR$ meets $\omega$ again at $P$ (other than $R$).  
+Suppose the circumcircles of $\triangle PCE$ and $\triangle PBF$ meet again at $Q$ (other than $P$).  
+Prove that lines $DI$ and $PQ$ meet on the external $\angle A$-bisector.",IMO 2019 Problem 6,"Start with a triangle $ABC$.
+Let $I$ be the incenter of $ABC$, and let the incircle touch $BC,CA,AB$ at $D,E,F$, respectively.
+Let $R$ be the point that lies both on the line through $D$ perpendicular to $EF$ and on the circle centered at $I$ with radius $ID$.
+Let $P$ be the point that lies both on the line $RA$ and on the incircle.
+Construct the circumcircle passing through $\triangle PCE$ with center $O_1$ and the circumcircle passing through $\triangle PBF$ with center $O_2$.
+Let $Q$ be a point that lies on both circumcircles.
+Let $T$ be the intersection point of the lines $PQ$ and $ID$.
+Let $N$ be the orthocenter of triangle $CAI$. Let $G$ lie on the line through $C$ parallel to $AB$ and also on the line through $A$ parallel to $CN$.
+Prove that $AT \perp AI$.","a b c = triangle a b c; d e f i = incenter2 d e f i a b c; r = on_tline r d e f, on_circle r i d; p = on_line p r a, on_circle p i d; o1 = circle o1 p c e; o2 = circle o2 p b f; q = on_circle q o1 p, on_circle q o2 p; t = on_line t p q, on_line t i d | n = orthocenter n c a i; g = on_pline g c a b, on_pline g a c n ? perp a t a i",yes,imo_2019_p6_solution,https://web.evanchen.cc/exams/IMO-2019-notes.pdf,no,"point(10), segment(4), line(4), bisector(1), triangle(3), circle(3)","line(1), point(1)",N/A,"Points $N$ and $G$ are introduced in JGEX as helper constructions to build a line through $A$ perpendicular to $AI$ i.e. the external $A$-bisector so that proving $AT \perp AI$ becomes equivalent to showing that $DI$ and $PQ$ meet on that bisector.
+first solution"
+25,"Consider the convex quadrilateral $ABCD$.  
+The point $P$ is in the interior of $ABCD$.  
+The following ratio equalities hold:
+$$
+\angle PAD : \angle PBA : \angle DPA = 1 : 2 : 3 = \angle CBP : \angle BAP : \angle BPC.
+$$
+Prove that the following three lines meet in a point:  
+the internal bisectors of angles $\angle ADP$ and $\angle PCB$ and the perpendicular bisector of segment $AB$.",IMO 2020 Problem 1,"Start with a triangle $PAB$.
+Let $X$ lie on the internal angle bisector of $\angle PBA$ at $B$.
+Let $Y$ lie on the internal angle bisector of $\angle PAB$ at $A$.
+Pick $Z$ so that $\angle PAZ=\angle XBA$.
+Pick $T$ so that $\angle APT=\angle ZAP$.
+Let $D$ lie on the line $AZ$ and satisfy $\angle TPD=\angle ABP$.
+Pick $U$ so that $\angle PBU=\angle YAB$.
+Pick $V$ so that $\angle BPV=\angle UBP$.
+Let $C$ lie on the line $BU$ and satisfy $\angle VPC=\angle BAP$.
+Let $O$ lie both on the iternal bisector of $\angle DAP$ at $A$ and on the internal bisector of $\angle PCB$ at $C$.
+Let $J$ be the intersection of the lines $OC$ and $AY$.
+Let $K$ be the reflection of $P$ across the line $JC$.
+Prove that $OA=OB$.","p a b = triangle p a b; x = angle_bisector x p b a; y = angle_bisector y p a b; z = on_aline z a p a b x; t = on_aline t p a p a z; d = on_aline d p t p b a, on_line d a z; u = on_aline u b p b a y; v = on_aline v p b p b u; c = on_aline c p v p a b, on_line c b u; o = angle_bisector o a d p, angle_bisector o p c b | j = intersection_ll j o c a y; k = reflect k p j c ? cong o a o b",yes,imo_2020_p1_solution,https://web.evanchen.cc/exams/IMO-2020-notes.pdf,no,"point(5), segment(1), bisector(3), quadrilateral(1)","point(1), segment(2), triangle(1), circle(2)",N/A,"Instead of starting with a quadrilateral $ABCD$, the jgex formulation starts from a triangle $PAB$ and then constructs points $C$ and $D$ step-by-step so that the 1:2:3 angle ratios hold. The solution also proceeds that way."
+26,"Let $D$ be an interior point of the acute triangle $ABC$ with $AB > AC$ so that $\angle DAB = \angle CAD$.  
+The point $E$ on the segment $AC$ satisfies $\angle ADE = \angle BCD$,  
+the point $F$ on the segment $AB$ satisfies $\angle FDA = \angle DBC$,  
+and the point $X$ on the line $AC$ satisfies $CX = BX$.  
+Let $O_1$ and $O_2$ be the circumcenters of the triangles $ADC$ and $EXD$, respectively.  
+Prove that the lines $BC$, $EF$, and $O_1O_2$ are concurrent.
+",IMO 2021 Problem 3,"Start with a triangle $ABC$.
+Let $D$ lie on the internal bisector of $\angle BAC$.
+Choose $E$ on the line $AC$ such that $\angle ADE=\angle BCD$.
+Choose $F$ on the line $AB$ such that $\angle ADF=\angle CBD$.
+Let $X$ be the point on the perpendicular bisector of $\overline{BC}$ that also lies on the line $AC$.
+Let $O_1$ be the circumcenter of $\triangle ADC$.
+Let $O_2$ be the circumcenter of $\triangle EXD$.
+Let $Y$ be the intersection of the lines $EF$ and $BC$.
+Prove that $O_1, O_2,$ and $Y$ are collinear.","a b c = triangle a b c; d = angle_bisector d b a c; e = on_aline e d a d c b, on_line e a c; f = on_aline f d a d b c, on_line f a b; x = on_bline x b c, on_line x a c; o1 = circle o1 a d c; o2 = circle o2 e x d; y = on_line y e f, on_line y b c ? coll o1 o2 y",no,imo_2021_p3_solution,https://web.evanchen.cc/exams/IMO-2021-notes.pdf,no,"point(9), segment(4), line(4), triangle(3), circle(2)","point(7), line(3), circle(5), quadrilateral(3)",N/A,
+27,"Let $ABCDE$ be a convex pentagon such that $BC = DE$.  
+Assume that there is a point $T$ inside $ABCDE$ with $TB = TD$, $TC = TE$ and $\angle ABT = \angle TEA$.  
+Let line $AB$ intersect lines $CD$ and $CT$ at points $P$ and $Q$, respectively.  
+Assume that the points $P, B, A, Q$ occur on their line in that order.  
+Let line $AE$ intersect $CD$ and $DT$ at points $R$ and $S$, respectively.  
+Assume that the points $R, E, A, S$ occur on their line in that order.  
+Prove that the points $P, S, Q, R$ lie on a circle.
+
+",IMO 2022 Problem 4,"Start with a segment $BC$.
+Choose a free point $D$.
+Let $E$ be the point such that $ED=BC$.
+Let $T$ be the point lying on both perpendicular bisectors of $\overline{BD}$ and $\overline{CE}$.
+Choose a point $A$ such that $\angle TBA = \angle TEA$.
+Define the four intersection points: $P = (AB)\cap(CD)$, $Q = (AB)\cap(CT)$, $R = (AE)\cap(CD)$, $S = (AE)\cap(DT)$.
+Prove that the four points $P,Q,R,S$ are cyclic.","b c = segment b c; d = free d; e = eqdistance e d b c; t = on_bline t b d, on_bline t c e; a = eqangle2 a b t e; p = on_line p a b, on_line p c d; q = on_line q a b, on_line q c t; r = on_line r a e, on_line r c d; s = on_line s a e, on_line s d t ? cyclic p q r s",yes,imo_2022_p4_solution,https://web.evanchen.cc/exams/IMO-2022-notes.pdf,no,"point(10), segment(6), line(5), pentagon(1)","point(4), line(1), circle(1)",N/A,pentagon construction added
+28,"On the sides of an arbitrary triangle $ABC$, triangles $ABR$, $BCP$, $CAQ$ are constructed externally with  
+$\angle CBP = \angle CAQ = 45^\circ$,  
+$\angle BCP = \angle ACQ = 30^\circ$,  
+$\angle ABR = \angle BAR = 15^\circ$.  
+Prove that $\angle QRP = 90^\circ$ and $QR = RP$.",IMO 1975 Problem 3,"Start with a triangle $ABC$.
+Choose a point $P$ so that $ \angle CBP=45^\circ$ and $\angle BCP=150^\circ.$
+Choose a point $Q$ so that $\angle ACQ=30^\circ$ and $\angle CAQ=135^\circ.$
+Choose a point $R$ so that $\angle BAR=15^\circ$ and $\angle ABR=165^\circ.$
+Construct a point $T$ such that $\triangle TBR$ is equilateral.
+Prove that $QR\perp RP$ and $QR = RP$.","a b c = triangle a b c; p = s_angle c b p 45o, s_angle b c p 150o; q = s_angle a c q 30o, s_angle c a q 135o; r = s_angle b a r 15o, s_angle a b r 165o | t = eq_triangle t b r ? perp q r r p; cong q r r p",yes,imo_1975_p3_solution,"Samuel L Greitzer, International Mathematical Olympiads 1959-1977",yes,"point(6), segment(5), triangle(4)","point(2), triangle(4), line(6), quadrilateral(2)",N/A,first solution
+29,"Let $A$ be one of the two distinct points of intersection of two unequal coplanar circles $C_1$ and $C_2$ with centers $O_1$ and $O_2$ respectively.  
+One of the common tangents to the circles touches $C_1$ at $P_1$ and $C_2$ at $P_2$, while the other touches $C_1$ at $Q_1$ and $C_2$ at $Q_2$.  
+Let $M_1$ be the midpoint of $P_1Q_1$ and $M_2$ the midpoint of $P_2Q_2$.  
+Prove that $\angle O_1AO_2 = \angle M_1AM_2$.
+",IMO 1983 Problem 2,"Start with a triangle $A O_1 O_2$.
+Consider the two circles: $\mathcal C_1$ centered at $O_1$ and passing through $A$, $\mathcal C_2$ centered at $O_2$ and passing through $A$.
+Construct the two common external tangents to $\mathcal C_1$ and $\mathcal C_2$ : the first one touches $\mathcal C_1$ at $P_1$ and $\mathcal C_2$ at $P_2$; the second tangent touches $\mathcal C_1$ at $Q_1$ and $\mathcal C_2$ at $Q_2$.
+Let $M_1$ be the midpoint of $\overline{P_1Q_1}$, and let $M_2$ be the midpoint of segment $\overline{P_2Q_2}$.
+Prove that $\angle O_1 A O_2 = \angle M_1 A M_2$.",a o1 o2 = triangle a o1 o2; p1 p2 q1 q2 = cc_tangent p1 p2 q1 q2 o1 a o2 a; m1 = midpoint m1 p1 q1; m2 = midpoint m2 p2 q2 ? eqangle a o1 a o2 a m1 a m2,no,imo_1983_p2_solution,"Murray S. KLAMKIN, International Mathematical Olympiads 1978-1985",no,"point(9), segment(2), line(2),  circle(2)","point(4), segment(1), line(3), bisector(1)",N/A,
+30,"Let $A, B, C, D$ be four distinct points on a line, in that order.  
+The circles with diameters $AC$ and $BD$ intersect at $X$ and $Y$.  
+The line $XY$ meets $BC$ at $Z$.  
+Let $P$ be a point on the line $XY$ other than $Z$.  
+The line $CP$ intersects the circle with diameter $AC$ at $C$ and $M$, and the line $BP$ intersects the circle with diameter $BD$ at $B$ and $N$.  
+Prove that the lines $AM, DN, XY$ are concurrent.",IMO 1995 Problem 1,"Start with a segment $AB$.
+Let $C$ and $D$ be points on the line $AB$.
+Let $O_1$ be the midpoint of $\overline{AC}$, and $O_2$ the midpoint of $\overline{BD}$.
+Let $X$ lie both on the circle centered at $O_1$ with radius $O_1A$ and on the circle centered at $O_2$ with radius $O_2B$. Let $Y$ also lie on both of these circles.
+Let $Z$ be the intersection of the lines $XY$ and $BC$.
+Choose a point $P$ on the line $XY$.
+Let $M$ be the point lying both on the circle centered at $O_1$ with radius $O_1A$ and on the line $CP$.
+Let $N$ be the point lying both on the circle centered at $O_2$ with radius $O_2B$ and on the line $BP$.
+Let $Q$ be the intersection of the lines $AM$ and $DN$.
+Prove that $Q, X, Y$ are collinear.","a b = segment a b; c = on_line c a b; d = on_line d a b; o1 = midpoint o1 a c; o2 = midpoint o2 b d; x = on_circle x o1 a, on_circle x o2 b; y = on_circle y o1 a, on_circle y o2 b; z = on_line z x y, on_line z b c; p = on_line p x y; m = on_circle m o1 a, on_line m c p; n = on_line n b p, on_circle n o2 b; q = on_line q a m, on_line q d n ? coll q x y",yes,imo_1995_p1_solution,"https://artofproblemsolving.com/wiki/index.php/1995_IMO_Problems/Problem_1
+",no,"point(10), segment(3), line(5), circle(2)","circle(1), quadrilateral(2)",N/A,
+31,"Let triangle $ABC$ with incenter $I$ satisfying $AB < AC < BC$.  
+Let $X$ be a point on line $BC$, different from $C$, such that the line through $X$ and parallel to $AC$ is tangent to the incircle.  
+Similarly, let $Y$ be a point on line $BC$, different from $B$, such that the line through $Y$ and parallel to $AB$ is tangent to the incircle.  
+Line $AI$ intersects the circumcircle of triangle $ABC$ again at $P$.  
+Let $K$ and $L$ be the midpoints of $AC$ and $AB$, respectively.  
+Prove that $\angle KIL + \angle YPX = 180^\circ$.",IMO 2024 Problem 4,"Start with a triangle $ABC$.
+Let $I$ be the incenter of $ABC$, and let the incircle touch $BC,CA,AB$ at $T_1,T_2,T_3$, respectively.
+Let $O$ be the circumcircle of $\triangle ABC$.
+Let $S_2$ be the reflection of $T_2$ across $I$.
+Define $X$ as the intersection of the line $BC$ with the line through $S_2$ parallel to $AC$.
+Let $S_3$ be the reflection of $T_3$ across $I$.
+Define $Y$ as the intersection of the line $BC$ with the line through $S_3$ parallel to $AB$.
+Let $P$ be a point lying both on the line $AI$ and on the circumcircle $O$.
+Let $K$ be the midpoint of $\overline{AC}$, and $L$ the midpoint of $\overline{AB}$.
+Prove that $\angle KIL = \angle XPY$.","a b c = triangle a b c; t1 t2 t3 i = incenter2 t1 t2 t3 i a b c; o = circle o a b c; s2 = mirror s2 t2 i; x = on_line x b c, on_pline x s2 a c; s3 = mirror s3 t3 i; y = on_line y b c, on_pline y s3 a b; p = on_line p a i, on_circle p o a; k = midpoint k a c; l = midpoint l a b ? eqangle k i i l x p p y",yes,imo_2024_p4_solution,https://web.evanchen.cc/exams/IMO-2024-notes.pdf,yes,"point(9), segment(2), line(4), triangle(1), circle(2)","point(1), line(2), circle(2)",N/A,
+32,"Let $\Omega$ and $\Gamma$ be circles with centres $M$ and $N$, respectively, such that the radius of $\Omega$ is less than the radius of $\Gamma$.  
+Suppose $\Omega$ and $\Gamma$ intersect at two distinct points $A$ and $B$.  
+Line $MN$ intersects $\Omega$ at $C$ and $\Gamma$ at $D$, so that $C, M, N, D$ lie on $MN$ in that order.  
+Let $P$ be the circumcenter of triangle $ACD$.  
+Line $AP$ meets $\Omega$ again at $E \ne A$ and meets $\Gamma$ again at $F \ne A$.  
+Let $H$ be the orthocenter of triangle $PMN$.  
+Prove that the line through $H$ parallel to $AP$ is tangent to the circumcircle of triangle $BEF$.",IMO 2025 Problem 2,"Start with a triangle $AMN$.
+Let $B$ lie on both circles centered at $M$ and at $N$ with radius $MA$ and $NA$, respectively.
+Let $C$ lie on the line $MN$ and on the circle centered at $M$ with radius $MA$.
+Let $D$ lie on the line $MN$ and on the circle centered at $N$ with radius $NA$.
+Let $P$ be the center of the circle that passes through the points $A,C,D$.
+Let $E$ be the point on the line $AP$ that also lies on the circle centered at $M$ with radius $MA$.
+Let $F$ be the point on the line $AP$ that also lies on the circle centered at $N$ with radius $NA$.
+Let $H$ be the intersection of the two perpendiculars: the line through $P$ perpendicular to $MN$, and the line through $M$ perpendicular to $PN$.
+Let $O$ be the circumcenter of $\triangle BEF$.
+Let $X$ be the point such that $\angle OXH=90^\circ$ and that lies on the line through $H$ parallel to $AP$.
+Let $W$ be the center of the circle that passes through $D,E,F$.
+Prove that $OX = OB$. Additionally, prove that the angle conditions $\angle CMN$ is obtuse and $\angle MND$ is obtuse.","a m n = triangle a m n; b = on_circle b m a, on_circle b n a; c = on_line c m n, on_circle c m a; d = on_line d m n, on_circle d n a; p = circle p a c d; e = on_line e a p, on_circle e m a; f = on_line f a p, on_circle f n a; h = on_tline h p m n, on_tline h m p n; o = circle o b e f; x = on_dia x o h, on_pline x h a p | w = circle w d e f ? cong o x o b; obtuse_angle c m n; obtuse_angle m n d",yes,imo_2025_p2_solution,https://web.evanchen.cc/exams/IMO-2025-notes.pdf,no,"point(10), line(3), triangle(3), circle(4)","point(3), segment(7), circle(2), line(4)",N/A,
+33," Let $ABCDE$ be a convex pentagon such that $BC = DE$.  
+Assume there is a point $T$ inside $ABCDE$ with $TB = TD$, $TC = TE$ and $\angle TBA = \angle AET$.  
+Let lines $CD$ and $CT$ intersect line $AB$ at points $P$ and $Q$, respectively, and let lines $CD$ and $DT$ intersect line $AE$ at points $R$ and $S$, respectively.  
+Assume that points $P, B, A, Q$ and $R, E, A, S$, respectively, are collinear and occur on their lines in this order.  
+Prove that the points $P, S, Q, R$ are concyclic.
+",IMO 2022 SL Geometry Problem 1,"Construct a segment $BC$. Choose a free point $D$. Construct a point $E$ such that $DE=BC$. Construct a point $T$ that lies on the perpendicular bisectors of $BD$ and $CE$. Construct a point $A$ such that $\angle TBA=\angle AET$. Define: $P = AB \cap CD$, $Q = AB \cap CT$, $R = AE \cap CD$, $S = AE \cap DT$. Prove that $P,Q,R,S$ lie on a common circle.","b c = segment b c; d = free d; e = eqdistance e d b c; t = on_bline t b d, on_bline t c e; a = eqangle2 a b t e; p = on_line p a b, on_line p c d; q = on_line q a b, on_line q c t; r = on_line r a e, on_line r c d; s = on_line s a e, on_line s d t ? cyclic p q r s",yes,,https://www.imo-official.org/problems/IMO2022SL.pdf,no,"point(10), segment(1),line(5),bisector (2), pentagon(1)",,,first solution.
+34,"In the acute-angled triangle $ABC$, the point $F$ is the foot of the altitude from $A$, and $P$ is a point on the segment $AF$.  
+The lines through $P$ parallel to $AC$ and $AB$ meet $BC$ at $D$ and $E$ respectively.  
+Points $X \ne A$ and $Y \ne A$ lie on the circles $ABD$ and $ACE$, respectively, such that $DA = DX$ and $EA = EY$.  
+Prove that $B, C, X$ and $Y$ are concyclic.",IMO 2022 SL Geometry Problem 2," Construct a triangle $ABC$.Construct the foot $F$ of the altitude from $A$ to $BC$. Choose a point $P$ on segment $AF$.Through $P$, draw the line parallel to $AC$; let it meet $BC$ at $D$.Through $P$, draw the line parallel to $AB$; let it meet $BC$ at $E$. Construct a point $X$ on the circumcircle of $\triangle ABD$ such that $DX=DA$. Construct a point $Y$ on the circumcircle of $\triangle ACE$ such that $EY=EA$. Construct $A_1 = BX \cap CY$. Construct $N$ as a common point of the circumcircle of $\triangle ABD$ and the circumcircle of $\triangle AEC$. Prove that $B,C,X,Y$ are concyclic.","a b c = triangle a b c; f = foot f a b c; p = on_line p a f; d = on_pline d p a c, on_line d b c; e = on_pline e p a b, on_line e b c; x = on_circum x a b d, eqdistance x d d a; y = on_circum y a c e, eqdistance y e e a; a1 = intersection_ll a1 b x c y; n = on_circum n a b d, on_circum n a e c ? cyclic b c x y",yes,,https://www.imo-official.org/problems/IMO2022SL.pdf,no,"point(11), triangle(1), line(6), circle(2), triangle(1)",,,first solution.
+35,"Let $ABC$ be an acute-angled triangle with $AC > AB$, let $O$ be its circumcentre, and let $D$ be a point on the segment $BC$.  
+The line through $D$ perpendicular to $BC$ intersects the lines $AO$, $AC$ and $AB$ at $W$, $X$ and $Y$, respectively.  
+The circumcircles of triangles $AXY$ and $ABC$ intersect again at $Z \ne A$.  
+
+Prove that if $OW = OD$, then $DZ$ is tangent to the circle $AXY$.",IMO 2022 SL Geometry Problem 4,"Construct a segment $BC$ and choose a point $D$ on line $BC$. Construct a point $O$ on the perpendicular bisector of $BC$. Construct a point $W$ such that: $DW \perp BC$, and $OW=OD$. Construct a point $A$ such that: $A,O,W$ are collinear, and $A$ lies on the circle centered at $O$ with radius $OB$.
+Let $X = (DW)\cap(AC)$ and $Y=(DW)\cap(AB)$. Construct the circle through $A,X,Y$ and let its center be $U$. Let $Z$ be the second intersection point (other than $A$) of: the circle centered at $O$ through $A$, and the circle centered at $U$ through $A$.
+Let $E = AO \cap BC$. Construct the circle through $X,D,C$ and let its center be $O_1$. Prove that $DZ \perp UZ.$","b c = segment b c; d = on_line d b c; o = on_bline o b c; w = on_tline w d b c, eqdistance w o d o; a = on_line a o w, on_circle a o b; x = intersection_ll x d w a c; y = intersection_ll y d w a b; u = circle u a x y; z = intersection_cc z o u a; e = intersection_ll e a o b c; o1 = circle o1 x d c ? perp d z u z",yes,,https://www.imo-official.org/problems/IMO2022SL.pdf,no,"point(12), segment(1), line(6), circle(3), triangle(2)",,,first solution.
+36,"Let $ABC$ be an acute-angled triangle with $AB \neq AC$. The circle with diameter $BC$ intersects the sides $AB$ and $AC$ at $M$ and $N$, respectively. Denote by $O$ the midpoint of $BC$. The bisectors of the angles $BAC$ and $MON$ intersect at $R$. Prove that the circumcircles of the triangles $BMR$ and $CNR$ have a common point lying on the line segment $BC$.",IMO SL 2004 G1,"Start with a triangle $ABC$. Let $O$ be the midpoint of segment $BC$. The point $M$ lies both on the circle with center $O$ and radius $OB$ and on the line $AB$. The point $N$ lies both on the circle with center $O$ and radius $OB$ and on the line $AC$. Let $R$ be the intersection point of the internal bisector of $\angle BAC$ and the internal bisector of $\angle MON$. Draw the circumcircle of triangle $BMR$ with center $O_1$ and the circumcircle of triangle $CNR$ with center $O_2$. Let point $P$ lie on both circumcircles. Prove that $P$, $B$, and $C$ are collinear.","a b c = triangle a b c; o = midpoint o b c; m = on_circle m o b, on_line m a b; n = on_circle n o b, on_line n a c; r = angle_bisector r b a c, angle_bisector r m o n; o1 = circle o1 b m r; o2 = circle o2 c n r; p = on_circle p o1 r, on_circle p o2 r ? coll p b c",yes,imo_sl_2004_g1_solution,https://www.imomath.com/imocomp/sl04.pdf,no,"point(8),line(5),segment(3),circle(3), triangle(1), bisector(2)",,,
+37," The circle $\Gamma$ and the line $\ell$ do not intersect. Let $AB$ be the diameter of $\Gamma$ perpendicular to $\ell$, with $B$ closer to $\ell$ than $A$. An arbitrary point $C \neq A, B$ is chosen on $\Gamma$. The line $AC$ intersects $\ell$ at $D$. The line $DE$ is tangent to $\Gamma$ at $E$, with $B$ and $E$ on the same side of $AC$. Let $BE$ intersect $\ell$ at $F$, and let $AF$ intersect $\Gamma$ at $G \neq A$. Prove that the reflection of $G$ in $AB$ lies on the line $CF$.",IMO SL 2004 G2,"Start with a right triangle $MDA$ with right angle at $D$. Let $B$ be a point on the line $AM$. Let $O$ be the midpoint of $\overline{AB}$. Let $C$ be a point that lies both on the circle with center $O$ and radius $OA$ and on the line $AD$. Let $E$ be a point on the circle with center $O$ and radius $OA$ such that $E$ lies on the circle with diameter $OD$. Let $F$ be the intersection of the lines $BE$ and $MD$. Let $G$ be the intersection of the line $FO$ with the circle centered at $O$ passing through $A$. Let $H$ be the reflection of $G$ across the line $AB$. Prove that $H$, $C$, and $F$ are collinear.","m d a = r_triangle m d a; b = on_line b a m; o = midpoint o a b; c = on_circle c o a, on_line c a d; e = on_circle e o a, on_dia e o d; f = intersection_ll f b e m d; g = intersection_lc g f o a; h = reflect h g a b ? coll h c f",yes,imo_sl_2004_g2_solution,https://www.imomath.com/imocomp/sl04.pdf,no,"point(8),line(7),segment(1),circle(1)",,,
+38,"Let $O$ be the circumcenter of an acute-angled triangle $ABC$ with $\angle B < \angle C$. The line $AO$ meets the side $BC$ at $D$. The circumcenters of the triangles $ABD$ and $ACD$ are $E$ and $F$, respectively. Extend the sides $BA$ and $CA$ beyond $A$, and choose on the respective extension points $G$ and $H$ such that $AG = AC$ and $AH = AB$. Prove that the quadrilateral $EFGH$ is a rectangle if and only if $\angle ACB - \angle ABC = 60°$.",IMO SL 2004 G3b,Let $CXY$ be an isosceles triangle with $CX = CY$. Let $B$ be a point on the circle with center $X$ and radius $XC$. Let $A$ be the intersection of the lines $XB$ and $YC$. Let $O$ be the circumcenter of $\triangle ABC$. Let $D$ be the intersection of the lines $AO$ and $BC$. Let $E$ be the circumcenter of $\triangle ABD$. Let $F$ be the circumcenter of $\triangle ACD$. Let $G$ be a point on the line $AB$ that also lies on the circle with center $A$ and radius $AC$. Let $H$ be a point on the line $AC$ that also lies on the circle with center $A$ and radius $AB$. Prove that $EF \perp FG$.,"c x y = ieq_triangle c x y; b = on_circle b x c; a = on_line a x b, on_line a y c; o = circle o a b c; d = intersection_ll d a o b c; e = circle e a b d; f = circle f a c d; g = on_line g a b, on_circle g a c; h = on_line h a c, on_circle h a b ? perp e f f g",yes,imo_sl_2004_g3_solution,https://www.imomath.com/imocomp/sl04.pdf,yes,"point(9), line(4),segment(5),circle(3), triangle(2),quadrilateral(1)",,,
+38,"Let $O$ be the circumcenter of an acute-angled triangle $ABC$ with $\angle B < \angle C$. The line $AO$ meets the side $BC$ at $D$. The circumcenters of the triangles $ABD$ and $ACD$ are $E$ and $F$, respectively. Extend the sides $BA$ and $CA$ beyond $A$, and choose on the respective extension points $G$ and $H$ such that $AG = AC$ and $AH = AB$. Prove that the quadrilateral $EFGH$ is a rectangle if and only if $\angle ACB - \angle ABC = 60°$.",IMO SL 2004 G3c,Let $CXY$ be an isosceles triangle with $CX = CY$. Let $B$ be a point on the circle with center $X$ and radius $XC$. Let $A$ be the intersection of the lines $XB$ and $YC$. Let $O$ be the circumcenter of $\triangle ABC$. Let $D$ be the intersection of the lines $AO$ and $BC$. Let $E$ be the circumcenter of $\triangle ABD$. Let $F$ be the circumcenter of $\triangle ACD$. Let $G$ be a point on the line $AB$ that also lies on the circle with center $A$ and radius $AC$. Let $H$ be a point on the line $AC$ that also lies on the circle with center $A$ and radius $AB$. Prove that $FG \perp GH$.,"c x y = ieq_triangle c x y; b = on_circle b x c; a = on_line a x b, on_line a y c; o = circle o a b c; d = intersection_ll d a o b c; e = circle e a b d; f = circle f a c d; g = on_line g a b, on_circle g a c; h = on_line h a c, on_circle h a b ? perp f g g h",yes,imo_sl_2004_g3_solution,https://www.imomath.com/imocomp/sl04.pdf,yes,"point(9), line(4),segment(5),circle(3), triangle(2),quadrilateral(1)",,,
+39,"Six points are chosen on the sides of an equilateral triangle $ABC$: $A_1, A_2$ on $BC$; $B_1, B_2$ on $CA$; $C_1, C_2$ on $AB$. These points are vertices of a convex hexagon $A_1A_2B_1B_2C_1C_2$ with equal side lengths. Prove that the lines $A_1B_2$, $B_1C_2$ and $C_1A_2$ are concurrent.",IMO SL 2005 G2,"Let $A_1$ be a point between $A_2$ and $C$ on a line. Construct an equilateral triangle on segment $A_2C$ with third vertex $X$. Let $B_1$ be a point that lies both on the circle with center $A_2$ and radius $A_2A_1$ and on the line $CX$. Let $B_2$ be a point on the line $CX$ that also lies on the circle with center $B_1$ and radius $B_1A_2$. Let $Y$ be the intersection of the line through $B_1$ parallel to $A_1C$ and the line through $B_2$ parallel to $A_2X$. Let $C_2$ be a point that lies both on the circle with center $A_1$ and radius $A_1A_2$ and on the circle with center $Y$ and radius $YB_2$. Construct $C_1$ such that $C_2YB_2C_1$ is a parallelogram. Let $B$ be the intersection of the lines $A_1A_2$ and $C_1C_2$. Let $A$ be the intersection of the lines $B_1B_2$ and $C_1C_2$. Let $Z$ be the intersection of the lines $A_1B_2$ and $B_1C_2$. Prove that $Z$, $C_1$, and $A_2$ are collinear.","a2 a1 c = between a2 a1 c; x = eq_triangle x a2 c; b1 = on_circle b1 a2 a1, on_line b1 c x; b2 = on_line b2 c x, on_circle b2 b1 a2; y = on_pline y b1 a1 c, on_pline y b2 a2 x; c2 = on_circle c2 a1 a2, on_circle c2 y b2; c1 = parallelogram c1 c2 y b2; b = intersection_ll b a1 a2 c1 c2; a = intersection_ll a b1 b2 c1 c2; z = intersection_ll z a1 b2 b1 c2 ? coll z c1 a2",yes,imo_sl_2005_g2_solution,https://www.imomath.com/imocomp/sl05_0707.pdf,no,"point(10),line(6),segment(9), triangle(1),hexagon(1)",,,
+40,"If $ABC$ is a triangle, then $A\neq B$, $A\neq C$, and $B\neq C$.",Synthetic:Triangle vertices are distinct,"Construct a triangle $ABC$. Prove that all pairs of vertices $AB$, $AC$ and $BC$ are different.",a b c = triangle a b c ? diff a b; diff a c; diff b c,no,"A (nondegenerate) triangle is defined by three distinct points, so no two vertices coincide.",https://artofproblemsolving.com/wiki/index.php/Triangle,no,"point(3), triangle(1), segment(3)",N/A,N/A,runs without yuclid
+41,"If $M$ is the midpoint of $\overline{AB}$, then $M$ is the midpoint of $\overline{AB}$.",Synthetic sanity check: Midpoint,Construct a segment $AB$ and his midpoint $M$. Prove that $M$ is the midpoint of $AB$.,a b = segment a b; m = midpoint m a b ? midp m a b,yes,True by the definition of the midpoint construction.,https://artofproblemsolving.com/wiki/index.php/Midpoint,no,"point(3), segment(2)",N/A,N/A,
+42,"If $C$ lies between $A$ and $B$, prove $A,B,C$ are collinear.  ",Synthetic problem: Between implies collinear,"Construct points $A,B,C$ with $C$ between $A$ and $B$. Prove $A,B,C$ are collinear.",c a b = between c a b ? coll a b c,yes,"Between” implies the three points lie on a common line, so they are collinear.  ",https://artofproblemsolving.com/wiki/index.php/Collinear,no," point(3), line(1), segment(2)  ",N/A,N/A,
+43,"If $ABC$ is a triangle, then $A,B,C$ are not collinear.",Synthetic problem: Triangle noncollinearity,"Construct a triangle $ABC$. Prove that $A,B,C$ are not collinear.
+",a b c = triangle a b c ? ncoll a b c,no,A triangle is defined by three noncollinear vertices.,https://artofproblemsolving.com/wiki/index.php/Triangle,no,"point(3), triangle(1), segment(3)",N/A,N/A,runs without yuclid
+44," If $AB\perp CD$, then $AB$ is not parallel to $CD$.  ",Synthetic problem: Perpendicular implies not parallel, Construct two lines $AB$ and $CD$ so that $CD$ is perpendicular to $AB$. Prove $AB$ is not parallel to $CD$.  ,a b = segment a b;c = free c;d = on_tline d c a b ? npara a b c d,no,"Perpendicular lines cannot be parallel, so $AB \not\parallel CD$.  
+
+",https://artofproblemsolving.com/wiki/index.php/Parallel_lines,no,"point(4), segment(1), line(2)  ",N/A,N/A,runs without yuclid
+45,"If $AB\parallel CD$, then $AB$ is not perpendicular to $CD$. ",Synthetic problem: Parallel implies not perpendicular,Construct $CD$ parallel to $AB$. Prove $AB$ is not perpendicular to $CD$.,a b = segment a b; c = free c; d = on_pline d c a b ? nperp a b c d,no,"Parallel lines have the same direction and cannot meet at right angles, so they are not perpendicular.  ",https://artofproblemsolving.com/wiki/index.php/Perpendicular,no,"point(4), segment(1), line(2)  ",N/A,N/A,runs without yuclid
+46,Let $O$ be the circumcenter of triangle $ABC$. Prove $O$ is the circumcenter of $ABC$.,Synthetic sanity check: Circumcenter,Construct a triangle $ABC$ and its circumcenter $O$. Prove that $O$ is the circumcenter of $ABC$.  ,a b c = triangle a b c;o = circle o a b c ? circle o a b c,yes,True by construction. ,https://artofproblemsolving.com/wiki/index.php/Circumcenter,no,"point(4), triangle(1), circle(1), segment(3)  ",N/A,N/A,
+47,Construct an equilateral triangle on segment $AB$. Prove that $\angle BAC = 60^\circ$.,Synthetic problem: Equilateral triangle implies a $60^\circ$ angle,Construct a segment $AB$. Construct a point $C$ such that $C$ lies on the circle centered at $A$ with radius $AB$ and also lies on the circle centered at $B$ with radius $BA$ (so $AC=AB$ and $BC=AB$). Prove that $\angle BAC$ equals $\pi/3$.,"a b = segment a b;c = on_circle c a b, on_circle c b a ? aconst a b a c 1/3",yes,"In an equilateral triangle, all angles are equal:
+$\angle A = \angle B = \angle C.$
+Also $\angle A + \angle B + \angle C = 180^\circ$.
+Therefore each angle is (180^\circ/3 = 60^\circ), so $\angle BAC = 60^\circ.$","Euclid’s Elements, Book I (Proposition 1 and Proposition 32)",yes,"point(3), segment(1), circle(2), triangle(1)",N/A,N/A,
+48,Construct $A$ so that $OA=1$. Prove $OA=1$.  ,Synthetic problem: Length-constant construction,"Construct a point $O$, then construct a point $A$ such that the length of segment $OA$ equals $1$. Prove $OA=1$.  ",o = free o;a = lconst a o 1 ? lconst o a 1,yes,True by construction. ,N/A,no,"point(2), segment(1)  ",N/A,N/A,
+49,"If $D$ is the midpoint of $AB$, prove $\dfrac{AD}{AB}=\dfrac12$.",Synthetic problem: Midpoint ratio  ,Construct segment $AB$ and its midpoint $D$. Prove that the ratio $AD/AB$ equals $1/2$. ,a b = segment a b;d = midpoint d a b ? rconst a d a b 1/2,yes," A midpoint satisfies $AD=\frac12 AB$, so $\frac{AD}{AB}=\frac12$. ",https://artofproblemsolving.com/wiki/index.php/Midpoint,yes,"point(3), segment(1)  ",N/A,N/A,
+50,"In square $ABCD$, if $O$ is intersection of diagonals, prove $\dfrac{|AB|^2}{|AO|^2}=2$.  ",Synthetic problem: Square diagonal half,Construct a square $ABCD$ and the intersection point $O$ of diagonals $AC$ and $BD$. Prove the squared-length ratio $|AB|^2/|AO|^2=2$. ,a b c d = isquare a b c d;o = intersection_ll o a c b d ? r2const a b a o 2/1,yes,"In a square, $|AC|=|AB|\sqrt2$ and $O$ is midpoint of $AC$, so $|AO|=\frac{|AB|\sqrt2}{2}$. Then $\frac{|AB|^2}{|AO|^2}=2$.  ",https://mathworld.wolfram.com/Square.html,yes,"point(5), square(1), segment(6), line(2)  ",N/A,NA,
+51,"If $D\in AB$, $E\in AC$, and $DE\parallel BC$, then $\triangle ADE\sim\triangle ABC$.",Synthetic lemma: AA similarity from parallels,"Construct triangle $ABC$, choose $D$ on $AB$, and choose $E$ on $AC$ so that $DE$ is parallel to $BC$. Prove triangles $ADE$ and $ABC$ are similar.","a b c = triangle a b c;d = on_line d a b;e = on_line e a c, on_pline e d b c ? simtri a d e a b c",yes,"With $DE\parallel BC$, corresponding angles satisfy $\angle ADE=\angle ABC$ and $\angle AED=\angle ACB$, so triangles are similar by AA.  ",https://artofproblemsolving.com/wiki/index.php/Similar_triangles,no,"point(5), triangle(1), line(3), segment(2)  ",N/A,N/A,
+52,"Let $ABC$ be a triangle. Construct a triangle $PQR$ such that $PQ=AB$, $PR=AC$, and $QR=BC$. Prove that triangles $ABC$ and $PQR$ are congruent.                   ","Euclid, Elements, Book I, Proposition 8 (SSS congruence)
+","Start with triangle $ABC$.  
+Choose a free point $P$.  
+Construct $Q$ so that $PQ=AB$.  
+Construct $R$ so that $PR=AC$ and $QR=BC$.  
+Prove that triangles $ABC$ and $PQR$ are congruent.","a b c = triangle a b c;p = free p;q = eqdistance q p a b;r = eqdistance r p a c, eqdistance r q b c ? contri a b c p q r",yes,SSS congruence theorem proof,"Euclid’s Elements, Book I, Proposition 8",no,"point(6), triangle(1), circle(2), segment(3)  ",N/A,N/A,
+53,Let $AB$ be a segment and let $\ell$ be the perpendicular bisector of $\overline{AB}$. Let $C$ be any point and let $C'$ be the reflection of $C$ across $\ell$. Prove that triangles $ABC$ and $BAC'$ are congruent by a reflection.,Synthetic lemma: Reflection congruence,"Start with segment $AB$.  
+Let $M$ be the midpoint of $AB$, and let $N$ be a point on the perpendicular bisector of $AB$ (so line $MN$ is the perpendicular bisector).  
+Choose a free point $C$. Reflect $C$ across line $MN$ to get $C'$.  
+Prove that $\triangle ABC$ is congruent to $\triangle BAC'$ by an orientation-reversing isometry.",a b = segment a b;m = midpoint m a b;n = on_bline n a b;c = free c;c1 = reflect c1 c m n ? contrir a b c b a c1,yes,"Reflection is an isometry, so it preserves lengths and angles (up to orientation). The predicate contrir encodes a congruence relation with a specified correspondence/order, which holds under the constructed reflection.",https://mathworld.wolfram.com/Reflection.html,no,"point(6), segment(2), line(3), bisector(1)",N/A,N/A,
+54,"Let $A,B,C$ be arbitrary points. Let $P$ be a point on the circumcircle of $\triangle ABC$. Let $Q$ be a point on the circumcircle of $\triangle BCP$ such that $QP=AB$. Let $R$ be a point on the circumcircle of $\triangle CPQ$. Prove that the ordered triples $(A,B,C)$ and $(P,Q,R)$ have the same orientation.",Synthetic construction: Chained circumcircle,"Construct three free points $A,B,C$.  
+Construct $P$ on the circumcircle of $\triangle ABC$.  
+Construct $Q$ on the circumcircle of $\triangle BCP$ with the additional constraint that $QP=AB$.  
+Construct $R$ on the circumcircle of $\triangle CPQ$.  
+Prove that the orientation of triangle $ABC$ matches the orientation of triangle $PQR$.","a = free a; b = free b; c = free c;p = on_circum p a b c;q = on_circum q b c p, eqdistance q p a b;r = on_circum r c p q ? sameclock a b c p q r",yes,N/A,N/A,no,"point(6),circle(3)",N/A,N/A,
+55,"Construct points $A,B,C$ and then points $P,Q,R$ as follows:
+- $P$ lies on the circumcircle of $\triangle ABC$.
+- $Q$ lies on the circumcircle of $\triangle BCP$ and satisfies $QP = AB$.
+- $R$ lies on the circumcircle of $\triangle CPQ$.
+Let $\omega_1$ be the circumcircle of $\triangle ABC$ and $\omega_2$ the circumcircle of $\triangle PQR$. Consider chord $BC$ on $\omega_1$ and chord $QR$ on $\omega_2$. Prove that $A$ lies on the same kind of arc of $\omega_1$ cut off by $BC$ as $P$ lies on of $\omega_2$ cut off by $QR$.",Synthetic problem: Arc-type dichotomy 1,"Construct $A,B,C$ freely, then construct $P,Q,R$ by chained circumcircle conditions and one distance constraint.  
+Compare arc types determined by chords $BC$ and $QR$ on the two circumcircles.  
+Attempt to prove both “same arc type” and “different arc type” at once.        Let $A$, $B$, and $C$ be three arbitrary points in the plane. Let $P$ be a point lying on the circumcircle of triangle $ABC$. Let $Q$ be a point on the circumcircle of triangle $BCP$ such that $QP = AB$. Let $R$ be a point on the circumcircle of triangle $CPQ$.
+Prove that the points $P$, $Q$, and $R$ all lie on the same side of the line $AB$ as the point $C$.","a = free a; b = free b; c = free c;p = on_circum p a b c;q = on_circum q b c p, eqdistance q p a b;r = on_circum r c p q ? sameside a b c p q r",yes,N/A,"Joyce’s Euclid, Book III (inscribed angles/arc relations)",no,"point(6), circle(3), triangle(3) ",N/A,N/A,
+56,"Construct points $A,B,C$ and then points $P,Q,R$ as follows:
+- $P$ lies on the circumcircle of $\triangle ABC$.
+- $Q$ lies on the circumcircle of $\triangle BCP$ and satisfies $QP = AB$.
+- $R$ lies on the circumcircle of $\triangle CPQ$.
+Let $\omega_1$ be the circumcircle of $\triangle ABC$ and $\omega_2$ the circumcircle of $\triangle PQR$. Consider chord $BC$ on $\omega_1$ and chord $QR$ on $\omega_2$. Prove that $A$ lies on a different kind of arc of $\omega_1$ cut off by $BC$ than $P$ lies on of $\omega_2$ cut off by $QR$.",Synthetic problem: Arc-type dichotomy 2,"Construct $A,B,C$ freely, then construct $P,Q,R$ by chained circumcircle conditions and one distance constraint.  
+Compare arc types determined by chords $BC$ and $QR$ on the two circumcircles.  
+Attempt to prove both “same arc type” and “different arc type” at once.        Let $A$, $B$, and $C$ be three arbitrary points in the plane. Let $P$ be a point lying on the circumcircle of triangle $ABC$. Let $Q$ be a point on the circumcircle of triangle $BCP$ such that $QP = AB$. Let $R$ be a point on the circumcircle of triangle $CPQ$.
+Prove that the points $P$, $Q$, and $R$ all lie on a different side of the line $AB$ as the point $C$.","a = free a; b = free b; c = free c;p = on_circum p a b c;q = on_circum q b c p, eqdistance q p a b;r = on_circum r c p q ? nsameside a b c p q r",yes,N/A,"Joyce’s Euclid, Book III (inscribed angles/arc relations)",no,"point(6), circle(3), triangle(3) ",N/A,N/A,
+57,"In a quadrilateral $ABCD$ with equal diagonals, prove $AC=BD$.",Synthetic problem: Equal diagonals ,Construct an equal-diagonal quadrilateral $ABCD$. Prove the diagonals are congruent.,a b c d = eqdia_quadrangle a b c d ? cong a c b d,yes,True by construction,N/A,no,"point(4), quadrilateral(1), segment(2)",N/A,N/A,
+58,"In $\triangle ABC$, if $G$ is the centroid and $X$ is the midpoint of $BC$, then $A,G,X$ are collinear.",Synthetic problem: Centroid lies on a median,"Construct triangle $ABC$, midpoints $X,Y,Z$ of the sides, and centroid $G$. Prove $A,X,G$ are collinear.",a b c = triangle a b c;x y z g = centroid x y z g a b c ? coll a x g,yes,"The centroid is the intersection point of the medians; $AX$ is a median, so $A,X,G$ are collinear."," E. E. Moise, Elementary Geometry from an Advanced Standpoint, Addison‑Wesley.",no,"point(7), triangle(1), line(1), segment(1)",N/A,N/A,
+59,"In $\triangle ABC$, let $X,Y,Z$ be the midpoints of the sides and let $I$ be the nine‑point circle center. Prove that $IX = IY$.",Synthetic problem: Nine‑point center equidistant from two side midpoints,"Construct a triangle $ABC$. Construct the nine points circle of the triangle $ABC$ to obtain the midpoints $X,Y,Z$ of the sides and the nine‑point center $I$. Prove that the distances from $I$ to $X$ and from $I$ to $Y$ are equal.","a b c = triangle a b c; x y z i = ninepoints x y z i a b c ? cong i x i y
+",yes,"By definition, $I$ is the center of the nine‑point circle passing through the midpoints $X,Y,Z$. Therefore all radii to those points are equal, in particular $IX=IY$.","Roger A. Johnson, Advanced Euclidean Geometry, Dover",no,"point(10), triangle(1), circle(1) ",N/A,N/A,
+60,Let $E$ be the intersection of line $BC$ with the line through $D$ parallel to $AC$. Prove $DE\parallel AC$.,Synthetic problem: Line–parallel intersection produces a parallel line,Construct triangle $ABC$ and a point $D$. Construct $E$ as the intersection of line $BC$ with the line through $D$ that is parallel to $AC$. Prove line $DE$ is parallel to $AC$.,a b c = triangle a b c;d = free d;e = intersection_lp e b c d a c ? para d e a c,yes,True by definition,N/A,no,"point(5), triangle(1), line(2)",N/A,N/A,
+61,Let $X$ be the intersection of line $AB$ with the perpendicular from $C$ to line $DE$. Prove $CX\perp DE$.,Synthetic problem: Perpendicular intersection gives a perpendicular line,"Construct points $A,B,C$ and a segment $DE$. Construct $X$ as the intersection of line $AB$ and the line through $C$ perpendicular to $DE$. Prove that line $CX$ is perpendicular to $DE$.",a b c = triangle a b c;d e = segment d e;x = intersection_lt x a b c d e ? perp c x d e,yes,True by defintion,N/A,no,"point(6), triangle(1), line(3)",N/A,N/A,
+62,Let $X$ be the intersection of the line through $A$ parallel to $BC$ and the line through $D$ parallel to $EF$. Prove $AX\parallel BC$ and $DX\parallel EF$.,Synthetic problem: Parallel–parallel intersection,"Construct triangle $ABC$ and points $D,E,F$. Construct $X$  in the intersection of the line through $A$ parallel to $BC$ and the line through $D$ parallel to $EF$.  Prove $AX\parallel BC$ and $DX\parallel EF$.",a b c = triangle a b c;d e f = triangle d e f;x = intersection_pp x a b c d e f ? para a x b c; para d x e f,yes,True by defintion,N/A,no,"point(7), triangle(2), line(4)",N/A,N/A,
+63,"If $X$ is constructed on the tangent at $A$ to the circle centered at $O$ (radius $OA$), prove $AX\perp AO$.",Synthetic problem: Tangent radius is perpendicular,"Construct points $O,A$. Construct $X$ on the line through $A$ perpendicular to $AO$. Prove $AX\perp AO$.",o a = segment o a;x = lc_tangent x a o ? perp a x a o,yes,True by definition.,N/A,no,"point(3), segment(1), line(2)",N/A,N/A,
+64,Let $X$ be a point such that the triangle $XAB$ is an isosceles right triangle. Then $AX\perp AB$ and $AX=AB$.,Synthetic construction: Isoceles right angle triangle,Let $AB$ be a segment. Costruct $X$ such that the triangle $XAB$ is an isosceles right triangle.  Prove that $AX\perp AB$ and $AX=AB$.,a b = segment a b;x = nsquare x a b ? perp a x a b; cong a x a b,yes,True by defintion,N/A,no,"point(3), segment(1), line(2)",N/A,N/A,
+65,"In any configuration, a segment has the same length as itself: $AB=BA$.",Synthetic sanity check: Reflexive congruence,"Construct five points $A,B,C,D,E$ as an inscribed convex pentagon. Prove that segment $AB$ is congruent to segment $BA$ (a reflexive identity).","a b c d e = pentagon a b c d e
+? cong a b b a",yes,This is a reflexive property of segment length: the distance from $A$ to $B$ equals the distance from $B$ to $A$. The pentagon construction is irrelevant to the truth of the predicate.,"E. E. Moise, Elementary Geometry from an Advanced Standpoint, Addison‑Wesley ",no,"point(5), pentagon(1)",N/A,N/A,
+66,"If $X$ is the image of $B$ under a $90^\circ$ rotation about $A$, then $AX\perp AB$ and $AX=AB$.",Synthetic construction: Rotate by $90^\circ$ about a point,"Construct points $A,B$. Construct $X$ as the image of $B$ under a rotation of 90 degrees around $A$. Prove $AX\perp AB$ and $AX=AB$.",a b = segment a b;x = psquare x a b ? perp a x a b; cong a x a b,yes,A $90^\circ$ rotation about $A$ preserves distance and makes the image ray perpendicular. Therefore $AX=AB$ and $AX\perp AB$.,"Coxeter, Introduction to Geometry, Wiley (rotations/isometries).",yes,"point(3), segment(1), line(2)",N/A,N/A,
+67,"In any configuration, a segment has the same length as itself: $AB=BA$.",Synthetic sanity check:Reflexive congruence sanity check (quadrangle setup),Construct a convex quadrilateral $ABCD$. Prove that segment $AB$ is congruent to segment $BA$.,a b c d = quadrangle a b c d ? cong a b b a,yes,$AB=BA$ holds by reflexivity of distance (the length of a segment does not depend on traversal direction).,"E. E. Moise, Elementary Geometry from an Advanced Standpoint, Addison‑Wesley.",no,"point(4), quadrilateral(1)",N/A,N/A,
+68,"In a right trapezoid $ABCD$ with $AB\parallel CD$ and $AB\perp AD$, prove $AB\parallel CD$ and $AB\perp AD$.",Synthetic sanity check: Right trapezoid properties,Construct a right trapezoid $ABCD$. Prove the defining parallelism and perpendicularity.,a b c d = r_trapezoid a b c d ? para a b c d; perp a b a d,yes,True by definition,"Coxeter, Introduction to Geometry, Wiley.",no,"point(4), quadrilateral(1), line(4)",N/A,N/A,
+69,"In rectangle $ABCD$, prove $AB\parallel CD$ and $AB\perp BC$.
+",Synthetic sanity check: Rectangle properties,Construct rectangle $ABCD$. Prove $AB\parallel CD$ and $AB\perp BC$,a b c d = rectangle a b c d ? para a b c d; perp a b b c,yes,True by definition,https://mathworld.wolfram.com/Rectangle.html,no,"point(4), quadrilateral(1), line(4)",N/A,N/A,
+70,"In an isosceles right triangle $ABC$ with right angle at $A$, prove $AB\perp AC$ and $AB=AC$.",Synthetic sanity check: Isosceles right triangle properties,"Construct points $A,B,C$ such that the triangle $ABC$ is an isosceles right triangle with a right angle at $A$. Prove that  $AB\perp AC$ and $AB=AC$.",a b c = risos a b c ? perp a b a c; cong a b a c,yes,True by defintion ,"Kiselev, Kiselev’s Geometry (Planimetry).",no,"point(3), triangle(1), line(2), segment(2)",N/A,N/A,
+71,"Given triangle $BCD$, construct the point $X$ as the image of $B$ under the translation that maps $D$ to $C$, so that
+$ XB = CD \quad \text{and} \quad XC = BD.$ (Equivalently, quadrilateral $BXCD$ is a parallelogram.)  
+Prove that $XB=CD$.",Synthetic problem: Shift produces an equal-length segment,"Construct a triangle $BCD$.  
+Construct point $X$ such that quadrilateral $BXCD$ is a parallelogram (so the translation sending $D$ to $C$ sends $B$ to $X$).  
+Prove $XB=CD$.",b c d = triangle b c d;x = shift x b c d ? cong x b c d,yes,"In a parallelogram, opposite sides are equal in length. Since $BXCD$ is a parallelogram by construction, $XB=CD$.","Coxeter, Introduction to Geometry, Wiley (translations/parallelograms preserve length).",no,"point(4), triangle(1), segment(2)",N/A,N/A,
+72,"Given segment $AB$, construct a square $ABCD$ with side $AB$.
+Prove that $AB\perp BC$ and $AB=BC.",Synthetic sanity check: Square from segment,"Construct a segment $AB$. Construct a square $ABCD$ on side $AB$.  
+Prove that $AB\perp BC$ and $AB=BC$",a b = segment a b;c d = square c d a b ? perp a b b c; cong a b b c,yes,True by defintion,https://mathworld.wolfram.com/Square.html,no,"point(4), square(1), line(2), segment(2)",N/A,N/A,
+73,"In a square $ABCD$, prove that adjacent sides are perpendicular and equal.",Synthetic sanity check: Square properties,Construct a square $ABCD$. Prove that $AB\perp BC$ and $AB=BC$.,a b c d = isquare a b c d ? perp a b b c; cong a b b c,yes,True by defintion,https://mathworld.wolfram.com/Square.html,no,"point(4), square(1), line(2), segment(2)",N/A,N/A,
+74,"In trapezoid $ABCD$ with $AB\parallel CD$, prove $AB\parallel CD$.",Synthetic sanity check: Trapezoid property,Construct trapezoid $ABCD$. Prove that $AB\parallel CD$,a b c d = trapezoid a b c d ? para a b c d,yes,True by defintion,"Aref & Wernick, Dover (2010), Ch. 1 (trapezoids)",no,"point(4), quadrilateral(1), line(2)",N/A,N/A,
+75,"Let $ABC$ be a triangle. Points $X$ and $Y$ are constructed on segment $AC$ such that the rays $BX$ and $BY$ trisect the angle $\angle ABC$.
+Prove that $\angle ABX = \angle XBY.$",Synthetic sanity check: Trisect property,Construct a triangle $ABC$. Construct the points $X$ and $Y$ on segment $AC$ such that the rays $BX$ and $BY$ trisect the angle $\angle ABC$. Prove that $\angle ABX = \angle XBY.$,a b c = triangle a b c;x y = trisect x y a b c ? eqangle a b x x b y,yes,True by defintion,"Coxeter, Introduction to Geometry, Wiley (angle constructions and directed angles).",no,"point(5), triangle(1), ray(2), segment(1)",N/A,N/A,
+76,"If points $X,Y$ trisect segment $AB$, then $AX=XY$ and $XY=YB$, and $A,X,Y,B$ are collinear.",Synthetic problem: Segment trisection,"Construct a segment $AB$. Construct trisection points $X,Y$. Prove $AX=XY$, $XY=YB$, and collinearity with $A,B$.",a b = segment a b;x y = trisegment x y a b ? cong a x x y; cong x y y b; coll a x b; coll a y b,yes,True by defintion," Kiselev, Kiselev’s Geometry (Planimetry) (segment division constructions).",no,"point(4), segment(4)",N/A,N/A,
+77,"From an external point $A$, the two tangent segments to a circle are equal.",Synthetic problem: Tangents from an external point are equal,"Construct a circle with center $O$ through $B$. Take an external point $A$. Construct tangent points $X,Y$ from $A$ to the circle. Prove $AX=AY$.",o b = segment o b;a = free a;x y = tangent x y a o b ? cong a x a y,yes,"Tangents from a common external point to a circle have equal lengths. Here $AX$ and $AY$ are tangents from $A$ to the circle centered at $O$, so $AX=AY$.","Joyce’s Euclid, Book III (equal tangents theorem) ",no,"point(5), segment(1), circle(1), line(2)",N/A,N/A,
+78,"Let $ABC$ be an equilateral triangle. Prove that triangles $ABC$ and $ACB$ are similar by an orientation‑reversing similarity (i.e., one is a mirror image of the other).",Synthetic problem: Equilateral symmetry ⇒ mirror-similarity of reversed vertex order,"Construct an equilateral triangle $ABC$. Consider the same triangle with the order of vertices reversed, namely triangle $ACB$. Show that there exists a similarity taking $\triangle ABC$ to $\triangle ACB$ that reverses orientation",a b c = ieq_triangle a b c ? simtrir a b c a c b,yes,"In an equilateral triangle, $AB=AC$ and $\angle BAC=60^\circ$. The line through $A$ and the midpoint of $BC$ is simultaneously a median, angle bisector, and perpendicular bisector; reflecting across this line swaps $B$ and $C$ and fixes $A$. Hence the reflection maps $\triangle ABC$ to $\triangle ACB$, which is a similarity with a reflection component, so it is orientation‑reversing.","Joyce’s Euclid, Book I (equilateral triangle construction and symmetry facts as standard corollaries)",no,"point(3), triangle(1)",N/A,N/A,
